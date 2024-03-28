@@ -1,0 +1,30 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+  i18n_domain="eea">
+
+  <genericsetup:upgradeSteps
+    source="1.0"
+    destination="1.1"
+    profile="eea.insitu.policy:default">
+
+    <genericsetup:upgradeDepends
+       title="Import all steps from eea.insitu.policy default profile"
+       import_profile="eea.insitu.policy:default"
+      />
+
+  </genericsetup:upgradeSteps>
+
+  <genericsetup:upgradeSteps
+    source="*"
+    destination="1.0"
+    profile="eea.insitu.policy:default">
+
+    <genericsetup:upgradeDepends
+       title="Import all steps from eea.insitu.policy default profile"
+       import_profile="eea.insitu.policy:default"
+      />
+
+  </genericsetup:upgradeSteps>
+
+</configure>
