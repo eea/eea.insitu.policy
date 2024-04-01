@@ -11,7 +11,6 @@ class HiddenProfiles(object):
     def getNonInstallableProfiles(self):
         """Hide uninstall profile from site-creation and quickinstaller."""
         return [
-            "eea.insitu.policy:languages",
             "eea.insitu.policy:uninstall",
         ]
 
