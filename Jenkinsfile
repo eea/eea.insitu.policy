@@ -2,8 +2,8 @@ pipeline {
   agent any
 
   environment {
-        GIT_NAME = "eea.website.policy"
-        SONARQUBE_TAGS = "www.eea.europa.eu,www.eea.europa.eu-en,demo-www.eea.europa.eu"
+        GIT_NAME = "eea.insitu.policy"
+        SONARQUBE_TAG = 'insitu.copernicus.eu'
     }
 
   stages {
