@@ -18,7 +18,7 @@ def test_suite():
         [
             layered(
                 doctest.DocFileSuite(
-                    "README.txt", optionflags=OPTIONFLAGS, 
+                    "README.txt", optionflags=OPTIONFLAGS,
                         package="eea.insitu.policy"
                 ),
                 layer=FUNCTIONAL_TESTING,
