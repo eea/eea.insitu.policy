@@ -1,14 +1,20 @@
 Changelog
 =========
 
+1.2-dev0 - (unreleased)
+---------------------------
+
+* Change: cleanup
+  [alecghica]
+
 1.1 - (2024-04-03)
 ---------------------------
 
-* Cleanup
+* Change: cleanup
   [alecghica]
 
 1.0 - (2024-04-02)
 ---------------------------
 
-* Initial release.
+* Feature: initial release
   [alecghica - refs #267919]

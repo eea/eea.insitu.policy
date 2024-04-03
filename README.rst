@@ -45,21 +45,21 @@ Install
 Buildout installation
 =====================
 
-- `Plone 4+ <https://github.com/eea/eea.website.policy/tree/master/buildouts/plone4>`_
-- `Plone 5+ <https://github.com/eea/eea.website.policy/tree/master/buildouts/plone5>`_
+- `Plone 4+ <https://github.com/eea/eea.insitu.policy/tree/master/buildouts/plone4>`_
+- `Plone 5+ <https://github.com/eea/eea.insitu.policy/tree/master/buildouts/plone5>`_
 
 
 Source code
 ===========
 
-- `Plone 4+ on github <https://github.com/eea/eea.website.policy>`_
-- `Plone 5+ on github <https://github.com/eea/eea.website.policy>`_
+- `Plone 4+ on github <https://github.com/eea/eea.insitu.policy>`_
+- `Plone 5+ on github <https://github.com/eea/eea.insitu.policy>`_
 
 
 Eggs repository
 ===============
 
-- https://pypi.python.org/pypi/eea.website.policy
+- https://pypi.python.org/pypi/eea.insitu.policy
 - http://eggrepo.eea.europa.eu/simple
 
 
@@ -70,12 +70,12 @@ It has been developed and tested for Plone 4 and 5. See buildouts section above.
 
 How to contribute
 =================
-See the `contribution guidelines (CONTRIBUTING.md) <https://github.com/eea/eea.website.policy/blob/master/CONTRIBUTING.md>`_.
+See the `contribution guidelines (CONTRIBUTING.md) <https://github.com/eea/eea.insitu.policy/blob/master/CONTRIBUTING.md>`_.
 
 Copyright and license
 =====================
 
-eea.website.policy (the Original Code) is free software; you can
+eea.insitu.policy (the Original Code) is free software; you can
 redistribute it and/or modify it under the terms of the
 GNU General Public License as published by the Free Software Foundation;
 either version 2 of the License, or (at your option) any later version.
