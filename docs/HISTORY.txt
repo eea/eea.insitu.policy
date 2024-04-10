@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.4-dev0 - (unreleased)
+1.4 - (2024-04-10)
 ---------------------------
 * Change: dummy release
   [alecghica]
