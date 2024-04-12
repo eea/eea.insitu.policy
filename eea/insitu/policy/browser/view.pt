@@ -1,7 +1,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
     i18n:domain="plone">
 <body>
-  <h1 i18n:translate="">TEST VIEW INSITU</h1>
-  <h2 i18n:translate="">TODO: Remove</h2>
+  <h1 i18n:translate="">Import reports... Check logs.</h1>
 </body>
 </html>

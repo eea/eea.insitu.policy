@@ -1,10 +1,11 @@
 """insitu.report content type"""
 
 from plone.autoform.interfaces import IFormFieldProvider
+from plone.dexterity.content import Container
+from plone.namedfile.field import NamedBlobFile
 from plone.restapi.behaviors import IBlocks
 from plone.supermodel import model
 from zope.interface import provider, implementer
-from plone.namedfile.field import NamedBlobFile
 
 
 @provider(IFormFieldProvider)
