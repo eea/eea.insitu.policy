@@ -1,3 +1,5 @@
+"""insitu.report content type"""
+
 from plone.app.textfield import RichText
 from plone.autoform.interfaces import IFormFieldProvider
 from plone.restapi.behaviors import IBlocks
@@ -20,5 +22,7 @@ class IInsituReport(model.Schema, IBlocks):
 
 
 @implementer(IInsituReport)
-class InsituReport:
+class InsituReport(object):
+    """insitu.report content type"""
+
     pass
