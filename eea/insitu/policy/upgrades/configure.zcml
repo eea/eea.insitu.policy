@@ -4,6 +4,18 @@
   i18n_domain="eea">
 
   <genericsetup:upgradeSteps
+    source="1.1"
+    destination="1.2"
+    profile="eea.insitu.policy:default">
+
+    <genericsetup:upgradeDepends
+        title="Update typeinfo"
+        description="Add Report content type."
+        import_steps="typeinfo"
+      />
+  </genericsetup:upgradeSteps>
+
+  <genericsetup:upgradeSteps
     source="1.0"
     destination="1.1"
     profile="eea.insitu.policy:default">
