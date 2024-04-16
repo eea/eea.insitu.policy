@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+"""Vocabularies"""
+
 from zope.schema.interfaces import IVocabularyFactory
 from zope.schema.vocabulary import SimpleTerm, SimpleVocabulary
 from zope.interface import alsoProvides
@@ -16,6 +18,7 @@ def generic_vocabulary(_terms, sort=True):
         _terms = sorted(_terms, key=lambda x: x[0])
 
     def factory(context):
+        """Simple Vocabulary factory"""
         return SimpleVocabulary(
             [SimpleTerm(n, n.encode("utf-8"), term) for n, term in _terms]
         )

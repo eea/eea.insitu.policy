@@ -1,10 +1,12 @@
-from Products.Five import BrowserView
-from eea.insitu.policy.migration.insitu_reports import INSITU_REPORTS_CSV
-from plone import api
+"""Views"""
+
 import csv
 import logging
-from eea.insitu.policy.vocabulary import _report_categories
 import transaction
+from Products.Five import BrowserView
+from eea.insitu.policy.migration.insitu_reports import INSITU_REPORTS_CSV
+from eea.insitu.policy.vocabulary import _report_categories
+from plone import api
 
 logger = logging.getLogger("eea.insitu.policy")
 
@@ -13,6 +15,7 @@ class ImportInsituReports(BrowserView):
     """Import insitu reports from csv file"""
 
     def get_report_category(self, text_categ):
+        """Get category as vocabulary key"""
         categs = {}
         for categ in _report_categories:
             categs[categ[1]] = categ[0]
@@ -22,6 +25,7 @@ class ImportInsituReports(BrowserView):
         return [res]
 
     def get_copernicus_service(self, text):
+        """Get copernicus service as vocabulary key"""
         services = {
             # OK
             "Atmosphere": ["CAMS"],

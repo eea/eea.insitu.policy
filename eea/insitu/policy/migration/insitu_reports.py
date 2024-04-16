@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+"""Initial import of insitu reports"""
+
 INSITU_REPORTS_CSV = """
 REPORT Title, URL,Description,Publishing date,EEA Topics,Country/Countries,Region ,Publisher,Data provenance,Other organisations involved,Rights,CATEG1,CATEG2/Copernicus_service,Copernicus Themes
 Analysis of user needs and the state of play on urban emissions in the COPERNICUS CO2 MVS (December 2021),https://insitu.copernicus.eu/library/reports/COINS_WP6_Report_2021EEA_final.pdf,,,,,,EEA,,,,General Reports on In Situ Data,Atmosphere,
