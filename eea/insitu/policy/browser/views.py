@@ -48,7 +48,7 @@ class ImportInsituReports(BrowserView):
 
                 report_title = data_row[0]
                 report_url = data_row[1]
-                report_publisher = data_row[7]
+                report_publisher = [data_row[7]]
                 report_category = self.get_report_category(data_row[11])
                 copernicus_services = self.get_copernicus_service(data_row[12])
 
