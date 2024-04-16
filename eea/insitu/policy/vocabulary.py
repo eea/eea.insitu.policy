@@ -24,8 +24,13 @@ def generic_vocabulary(_terms, sort=True):
 
 
 _copernicus_services = (
-    ("Test1", "Test 1"),
-    ("Test2", "Test 2"),
+    ("CAMS", "Copernicus Atmosphere Monitoring Service"),
+    ("CEMS", "Copernicus Emergency Management Service"),
+    ("CLMS", "Copernicus Land Monitoring Service"),
+    ("CMEMS", "Copernicus Marine Service"),
+    ("C3S", "Copernicus Climate Change Service"),
+    ("CSS", "Copernicus Security Service"),
+    ("CSC", "Copernicus Space Component"),
 )
 copernicus_services = generic_vocabulary(_copernicus_services)
 alsoProvides(copernicus_services, IVocabularyFactory)
