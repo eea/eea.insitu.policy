@@ -27,8 +27,6 @@ class IInsituReport(model.Schema, IBlocks):
             vocabulary="eea.insitu.policy.report_categories"),
     )
 
-    publisher = schema.TextLine(title="Publisher", required=False)
-
 
 @implementer(IInsituReport)
 class InsituReport(Container):
