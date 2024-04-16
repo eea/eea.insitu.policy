@@ -73,5 +73,4 @@ GISC - Handover of the GISC Quick Wins - October 2013,https://insitu.copernicus.
 GISC - Report on review process and changes in the approach of the project - March 2013,https://insitu.copernicus.eu/library/reports/GISC - Report on review process and changes in the approach of the project - March 2013.pdf,,,,,,EEA,,,,Background,,
 GISC - Report on analysis of in situ data requirements and criteria to determine priorities - July 2012,https://insitu.copernicus.eu/library/reports/GISC - Report on analysis of in situ data requirements and criteria to determine priorities - July 2012.pdf,,,,,,EEA,,,,Background,,
 GISC - Revised list of stakeholders - December 2011,https://insitu.copernicus.eu/library/reports/GISC - Revised list of stakeholders - December 2011.pdf,,,,,,EEA,,,,Background,,
-"""
-# noqa: E501
+"""  # noqa: E501
