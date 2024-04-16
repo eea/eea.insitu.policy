@@ -20,7 +20,7 @@ class IInsituReport(model.Schema, IBlocks):
 
 
 @implementer(IInsituReport)
-class InsituReport(object):
+class InsituReport(Container):
     """insitu.report content type"""
 
     pass
