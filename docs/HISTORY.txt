@@ -1,6 +1,9 @@
 Changelog
 =========
 
+1.6-dev0 - (unreleased)
+---------------------------
+
 1.5 - (2024-04-17)
 ---------------------------
 * Change: Report content type and initial import from csv content.
