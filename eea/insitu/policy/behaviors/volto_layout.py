@@ -1,3 +1,5 @@
+"""Layout, blocks layout"""
+
 insitu_report_layout_items = [
     "ffded585-e851-4216-8b41-5c06e7935bb2",
     "2a1c5c01-ef66-4c9a-a4a5-33d0ad403636",
