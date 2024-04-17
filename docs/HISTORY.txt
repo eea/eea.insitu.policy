@@ -1,6 +1,11 @@
 Changelog
 =========
 
+1.5 - (2024-04-17)
+---------------------------
+* Change: Report content type and initial import from csv content.
+  [GhitaB]
+
 1.4 - (2024-04-10)
 ---------------------------
 * Change: dummy release

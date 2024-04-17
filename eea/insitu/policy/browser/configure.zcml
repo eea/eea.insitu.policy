@@ -4,9 +4,10 @@
   i18n_domain="eea">
 
   <browser:page
-    name="insitu_test_view"
+    name="import_insitu_reports"
     for="*"
     template="view.pt"
+    class=".views.ImportInsituReports"
     permission="zope2.View"
     />
 

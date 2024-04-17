@@ -8,4 +8,13 @@
   <include package=".browser" />
   <include package=".upgrades" />
 
+  <utility
+    name="eea.insitu.policy.copernicus_services"
+    component=".vocabulary.copernicus_services"
+    />
+
+  <utility
+    name="eea.insitu.policy.report_categories"
+    component=".vocabulary.report_categories"
+    />
 </configure>
