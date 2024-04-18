@@ -48,8 +48,51 @@ alsoProvides(copernicus_components, IVocabularyFactory)
 
 
 _copernicus_themes = (
-    ("TESTT1", "Test Copernicus Theme 1"),
-    ("TESTT2", "Test Copernicus Theme 2"),
+    ("ADDRESSES", "Addresses"),
+    ("ADMINISTRATIVEUNITS", "Administrative units"),
+    ("CADASTRALPARCELS", "Cadastral parcels"),
+    ("COORDINATEREFERENCE", "Coordinate reference systems"),
+    ("GEOGRAPHICALGRID", "Geographical grid systems"),
+    ("GEOGRAPHICALNAMES", "Geographical names"),
+    ("HYDROGRAPHY", "Hydrography"),
+    ("PROTECTEDSITES", "Protected sites"),
+    ("TRANSPORTNETWORKS", "Transport networks"),
+    ("ELEVATION", "Elevation"),
+    ("GEOLOGY", "Geology"),
+    ("LANDCOVER", "Land cover"),
+    ("ORTHOIMAGERY", "Orthoimagery"),
+    (
+        "AGRICULTURALAQUACULTURE",
+        "Agricultural and aquaculture facilities",
+    ),
+    (
+        "AREAMANAGEMENT",
+        "Area management/restriction/regulation zones & reporting units",
+    ),
+    ("ATMOSPHERICCONDITIONS", "Atmospheric conditions"),
+    ("BIOGEOGRAPHICALREGIONS", "Bio-geographical regions"),
+    ("BUILDINGS", "Buildings"),
+    ("ENERGYRESOURCES", "Energy resources"),
+    ("ENVIRONMENTALMONITORING", "Environmental monitoring facilities"),
+    ("HABITATSANDBIOTOPES", "Habitats and biotopes"),
+    ("HUMANHEALTHANDSAFETY", "Human health and safety"),
+    ("LANDUSE", "Land use"),
+    ("METEOROLOGICALGEOGRAPHICAL", "Meteorological geographical features"),
+    ("MINERALRESOURCES", "Mineral resources"),
+    ("NATURALRISK", "Natural risk zones"),
+    ("OCEANOGRAPHICGEOGRAPHICAL", "Oceanographic geographical features"),
+    (
+        "POPULATIONDISTRIBUTION",
+        "Population distribution and demography",
+    ),
+    ("PRODUCTIONINDUSTRIAL", "Production and industrial facilities"),
+    ("SEAREGIONS", "Sea regions"),
+    ("SOIL", "Soil"),
+    ("SPECIESDISTRIBUTION", "Species distribution"),
+    ("STATISTICALUNITS", "Statistical units"),
+    ("UTILITYGOVERNMENTAL", "Utility and governmental services"),
+    ("NA", "N/A"),
+    ("TBD", "TBD"),
 )
 
 copernicus_themes = generic_vocabulary(_copernicus_themes)
