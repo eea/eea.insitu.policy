@@ -4,6 +4,18 @@
   i18n_domain="eea">
 
   <genericsetup:upgradeSteps
+    source="1.2"
+    destination="1.3"
+    profile="eea.insitu.policy:default">
+
+    <genericsetup:upgradeDepends
+        title="Update catalog"
+        description="Add catalog columns for Report."
+        import_steps="catalog"
+      />
+  </genericsetup:upgradeSteps>
+
+  <genericsetup:upgradeSteps
     source="1.1"
     destination="1.2"
     profile="eea.insitu.policy:default">
