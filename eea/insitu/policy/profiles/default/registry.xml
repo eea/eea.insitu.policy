@@ -1,0 +1,28 @@
+<registry>
+  <records interface="plone.app.querystring.interfaces.IQueryField"
+    prefix="plone.app.querystring.field.copernicus_services">
+    <value key="title">Copernicus Services</value>
+    <value key="description">Relevant Copernicus Services</value>
+    <value key="enabled">True</value>
+    <value key="sortable">False</value>
+    <value key="operations">
+      <element>plone.app.querystring.operation.selection.any</element>
+      <element>plone.app.querystring.operation.selection.none</element>
+    </value>
+    <value key="vocabulary">eea.insitu.policy.copernicus_services</value>
+    <value key="group">Metadata</value>
+  </records>
+  <records interface="plone.app.querystring.interfaces.IQueryField"
+    prefix="plone.app.querystring.field.report_category">
+    <value key="title">Report Category</value>
+    <value key="description">The section to be listed in for a report</value>
+    <value key="enabled">True</value>
+    <value key="sortable">False</value>
+    <value key="operations">
+      <element>plone.app.querystring.operation.selection.any</element>
+      <element>plone.app.querystring.operation.selection.none</element>
+    </value>
+    <value key="vocabulary">eea.insitu.policy.report_categories</value>
+    <value key="group">Metadata</value>
+  </records>
+</registry>
