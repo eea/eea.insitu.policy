@@ -1,6 +1,11 @@
 Changelog
 =========
 
+1.7 - (2024-04-18)
+---------------------------
+* Change: TEST Update README.rst
+  [GhitaB]
+
 1.6 - (2024-04-18)
 ---------------------------
 * Change: Add catalog indexes for insitu.report
