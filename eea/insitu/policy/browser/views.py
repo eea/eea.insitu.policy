@@ -45,7 +45,7 @@ class ImportInsituReports(BrowserView):
         return services.get(text, text)
 
     def __call__(self):
-        pass  # Already imported
+        # Already imported
         """
         report_index = 0
         for csv_line in INSITU_REPORTS_CSV.splitlines():
@@ -83,9 +83,13 @@ class ImportInsituReportsDates(BrowserView):
     """We need the publishing date copied from the old website for each file"""
 
     def _fix_date_for_report(self, report):
-        def updateEffective(object, value):
-            object.setEffectiveDate(value)
-            object.reindexObject()
+        """ Update publication date for report
+        """
+        def updateEffective(obj, value):
+            """ Update publication date for obj
+            """
+            obj.setEffectiveDate(value)
+            obj.reindexObject()
             transaction.commit()
 
         if report.file is None:
@@ -94,16 +98,14 @@ class ImportInsituReportsDates(BrowserView):
         lines = [x for x in INSITU_REPORTS_DATE.splitlines()]
         filename = report.file.filename
         found = [x for x in lines if filename in x]
-        if len(found) > 0:
+        if found:
             report_data = found[0]
             date = report_data.split(",")[0]
             date_time = DateTime(date)
             updateEffective(report, date_time)
-            logger.info("Updated: %s <-- %s" % (report.absolute_url(), date))
-            print("Updated: %s <-- %s" % (report.absolute_url(), date))
+            logger.info("Updated: %s <-- %s", report.absolute_url(), date)
         else:
-            logger.info("Not found: %s" % (report.absolute_url()))
-            print("Not found: %s" % (report.absolute_url()))
+            logger.info("Not found: %s", report.absolute_url())
 
     def __call__(self):
         site = api.portal.get()
