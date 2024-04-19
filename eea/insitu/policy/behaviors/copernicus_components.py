@@ -15,6 +15,7 @@ class ICopernicusComponents(model.Schema):
         title="Copernicus Components",
         description="Select Copernicus Components",
         required=False,
-        value_type=schema.Choice(vocabulary="eea.insitu.policy.copernicus_components"),
+        value_type=schema.Choice(
+            vocabulary="eea.insitu.policy.copernicus_components"),
     )
     directives.write_permission(copernicus_components="cmf.ManagePortal")

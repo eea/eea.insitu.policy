@@ -15,6 +15,7 @@ class ICopernicusThemes(model.Schema):
         title="Copernicus Themes",
         description="Select Copernicus Themes",
         required=False,
-        value_type=schema.Choice(vocabulary="eea.insitu.policy.copernicus_themes"),
+        value_type=schema.Choice(
+            vocabulary="eea.insitu.policy.copernicus_themes"),
     )
     directives.write_permission(copernicus_themes="cmf.ManagePortal")
