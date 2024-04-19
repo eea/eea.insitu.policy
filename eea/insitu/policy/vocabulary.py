@@ -39,8 +39,36 @@ copernicus_services = generic_vocabulary(_copernicus_services)
 alsoProvides(copernicus_services, IVocabularyFactory)
 
 _copernicus_components = (
-    ("TESTC1", "Test Copernicus Component 1"),
-    ("TESTC2", "Test Copernicus Component 2"),
+    ("MWR", "Micro-Wave Radiometer"),
+    ("SRAL", "Synthetic Aperture Radar Altimeter"),
+    ("OLCI", "Ocean and Land Colour Instrument"),
+    ("SLSTR", "Sea and Land Surface Temperature Radiometer"),
+    (
+        "SLSTROLCI",
+        "Sea and Land Surface Temperature Radiometer/Ocean and Land Colour Instrument",
+    ),
+    ("TROPOMI", "TROPOspheric Monitoring Instrument"),
+    ("SEN5", "Sentinel-5	Sentinel-5p"),
+    ("SENOCEAN", "Se-3-Ocean	Sentinel-3-Ocean"),
+    ("SENLAND", "Sen-3-Land	Sentinel-3-Land"),
+    ("RM", "Rapid Mapping"),
+    ("EWC", "Early Warning"),
+    ("RR", "Risk and Recovery"),
+    ("CCC", "Climate Change"),
+    ("LLC", "Local Land"),
+    ("PLC", "Pan-European Land"),
+    ("GLC", "Global Land"),
+    ("PRIOR", "Priority Area Monitoring"),
+    ("LANDCOVER", "Land Cover and Land Use Mapping"),
+    ("BIOGEO", "Bio-geophysical Parameters"),
+    ("SATDATA", "Satellite Data"),
+    ("REFVAL", "Reference and Validation Data"),
+    ("GROUND", "Ground Motion Monitoring"),
+    ("BSC", "Border Surveillance"),
+    ("MSC", "Maritime Surveillance"),
+    ("SESA", "Support to EU External and Security Actions"),
+    ("AMC", "Atmosphere Monitoring"),
+    ("MMC", "Marine Environment Monitoring"),
 )
 
 copernicus_components = generic_vocabulary(_copernicus_components)
