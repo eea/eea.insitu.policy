@@ -1,6 +1,11 @@
 Changelog
 =========
 
+1.9 - (2024-04-19)
+---------------------------
+* Change: Develop
+  [GhitaB]
+
 1.8 - (2024-04-19)
 ---------------------------
 * Change: Add Copernicus  Themes and Components behaviors

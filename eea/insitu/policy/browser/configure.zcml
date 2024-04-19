@@ -11,4 +11,11 @@
     permission="zope2.View"
     />
 
+  <browser:page
+    name="import_insitu_report_dates"
+    for="*"
+    template="view.pt"
+    class=".views.ImportInsituReportsDates"
+    permission="zope2.View"
+    />
 </configure>

@@ -1,12 +1,17 @@
 """Views"""
 
-import csv
+# import csv
 import logging
+
 import transaction
 from Products.Five import BrowserView
-from eea.insitu.policy.migration.insitu_reports import INSITU_REPORTS_CSV
+from Products.CMFCore.utils import getToolByName
+
+# from eea.insitu.policy.migration.insitu_reports import INSITU_REPORTS_CSV
+from eea.insitu.policy.migration.insitu_reports_date import INSITU_REPORTS_DATE
 from eea.insitu.policy.vocabulary import _report_categories
 from plone import api
+from DateTime import DateTime
 
 logger = logging.getLogger("eea.insitu.policy")
 
@@ -40,6 +45,8 @@ class ImportInsituReports(BrowserView):
         return services.get(text, text)
 
     def __call__(self):
+        # Already imported
+        """
         report_index = 0
         for csv_line in INSITU_REPORTS_CSV.splitlines():
             if len(csv_line) > 2:
@@ -69,3 +76,42 @@ class ImportInsituReports(BrowserView):
                 report_index += 1
                 if report_index % 10 == 0:
                     transaction.commit()
+        """
+
+
+class ImportInsituReportsDates(BrowserView):
+    """We need the publishing date copied from the old website for each file"""
+
+    def _fix_date_for_report(self, report):
+        """ Update publication date for report
+        """
+        def updateEffective(obj, value):
+            """ Update publication date for obj
+            """
+            obj.setEffectiveDate(value)
+            obj.reindexObject()
+            transaction.commit()
+
+        if report.file is None:
+            return
+
+        lines = [x for x in INSITU_REPORTS_DATE.splitlines()]
+        filename = report.file.filename
+        found = [x for x in lines if filename in x]
+        if found:
+            report_data = found[0]
+            date = report_data.split(",")[0]
+            date_time = DateTime(date)
+            updateEffective(report, date_time)
+            logger.info("Updated: %s <-- %s", report.absolute_url(), date)
+        else:
+            logger.info("Not found: %s", report.absolute_url())
+
+    def __call__(self):
+        site = api.portal.get()
+        catalog = getToolByName(site, "portal_catalog")
+        brains = catalog.searchResults(portal_type="insitu.report")
+
+        for brain in brains:
+            report = brain.getObject()
+            self._fix_date_for_report(report)
