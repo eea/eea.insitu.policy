@@ -1,6 +1,11 @@
 Changelog
 =========
 
+2.0 - (2024-04-22)
+---------------------------
+* Change: Migrate date for reports from old website related files.
+  [GhitaB]
+
 1.9 - (2024-04-19)
 ---------------------------
 * Change: Develop

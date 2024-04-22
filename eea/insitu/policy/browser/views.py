@@ -10,6 +10,7 @@ from Products.CMFCore.utils import getToolByName
 # from eea.insitu.policy.migration.insitu_reports import INSITU_REPORTS_CSV
 from eea.insitu.policy.migration.insitu_reports_date import INSITU_REPORTS_DATE
 from eea.insitu.policy.vocabulary import _report_categories
+from eea.insitu.policy.browser.utils import normalized
 from plone import api
 from DateTime import DateTime
 
@@ -83,11 +84,10 @@ class ImportInsituReportsDates(BrowserView):
     """We need the publishing date copied from the old website for each file"""
 
     def _fix_date_for_report(self, report):
-        """ Update publication date for report
-        """
+        """Update publication date for report"""
+
         def updateEffective(obj, value):
-            """ Update publication date for obj
-            """
+            """Update publication date for obj"""
             obj.setEffectiveDate(value)
             obj.reindexObject()
             transaction.commit()
@@ -97,7 +97,7 @@ class ImportInsituReportsDates(BrowserView):
 
         lines = [x for x in INSITU_REPORTS_DATE.splitlines()]
         filename = report.file.filename
-        found = [x for x in lines if filename in x]
+        found = [x for x in lines if normalized(filename) in normalized(x)]
         if found:
             report_data = found[0]
             date = report_data.split(",")[0]
