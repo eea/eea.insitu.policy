@@ -6,4 +6,10 @@
  <index name="copernicus_services" meta_type="KeywordIndex">
   <indexed_attr value="copernicus_services"/>
  </index>
+ <index name="copernicus_themes" meta_type="KeywordIndex">
+  <indexed_attr value="copernicus_themes"/>
+ </index>
+ <index name="copernicus_components" meta_type="KeywordIndex">
+  <indexed_attr value="copernicus_components"/>
+ </index>
 </object>

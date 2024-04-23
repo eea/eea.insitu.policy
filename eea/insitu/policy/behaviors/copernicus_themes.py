@@ -11,11 +11,13 @@ from zope.interface import provider
 class ICopernicusThemes(model.Schema):
     """Copernicus Themes behavior"""
 
-    copernicus_themes = schema.List(
-        title="Copernicus Themes",
-        description="Select Copernicus Themes",
-        required=False,
-        value_type=schema.Choice(
-            vocabulary="eea.insitu.policy.copernicus_themes"),
+    directives.widget(
+        "copernicus_themes", vocabulary="eea.insitu.policy.copernicus_themes"
     )
-    directives.write_permission(copernicus_themes="cmf.ManagePortal")
+    copernicus_themes = schema.Tuple(
+        title="Copernicus Themes",
+        value_type=schema.TextLine(
+            title="Copernicus Theme",
+            required=False,
+        ),
+    )

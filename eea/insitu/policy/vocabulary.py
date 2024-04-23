@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
 """Vocabularies"""
 
+from plone.app.vocabularies.catalog import KeywordsVocabulary as BKV
 from zope.schema.interfaces import IVocabularyFactory
 from zope.schema.vocabulary import SimpleTerm, SimpleVocabulary
 from zope.interface import alsoProvides
+from zope.interface import implementer
 
 
 def generic_vocabulary(_terms, sort=True):
@@ -148,3 +150,17 @@ _report_categories = (
 )
 report_categories = generic_vocabulary(_report_categories)
 alsoProvides(report_categories, IVocabularyFactory)
+
+
+@implementer(IVocabularyFactory)
+class KeywordsVocabulary(BKV):
+    """Keywords"""
+
+    def __init__(self, index):
+        """Kwywords"""
+        self.keyword_index = index
+
+
+CopernicusComponentsVocabularyFactory = KeywordsVocabulary(
+    "copernicus_components")
+CopernicusThemesVocabularyFactory = KeywordsVocabulary("copernicus_themes")
