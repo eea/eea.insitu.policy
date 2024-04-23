@@ -1,5 +1,6 @@
 """Get JSON data from an uploaded file containing the CIS2 definitions"""
 
+import json
 from Products.Five import BrowserView
 from eea.insitu.policy.cis2.cis2_annot import save_annot
 
@@ -15,9 +16,9 @@ class CIS2SaveJSON(BrowserView):
         if self.request.form:
             file_upload = self.request.form.get("fileToUpload", None)
             if file_upload is not None:
-                file = file_upload.file
-                file.seek(0)
-                json_data = file.read()
+                json_file = file_upload.file
+                json_file.seek(0)
+                json_data = json.loads(json_file.read())
 
                 save_annot(json_data)
 

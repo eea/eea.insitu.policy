@@ -1,4 +1,4 @@
-"""Easy way to check existing definitions saved in annotations related to CIS2"""
+"""Easy way to check definitions saved in annotations related to CIS2"""
 
 from Products.Five import BrowserView
 from eea.insitu.policy.cis2.cis2_annot import get_annot
