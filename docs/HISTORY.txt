@@ -1,6 +1,11 @@
 Changelog
 =========
 
+2.2 - (2024-04-23)
+---------------------------
+* Change: Update creation date of reports
+  [GhitaB]
+
 2.1 - (2024-04-23)
 ---------------------------
 * Change: Report layout. Components, Themes multi-select.

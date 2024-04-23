@@ -108,6 +108,36 @@ class ImportInsituReportsDates(BrowserView):
             logger.info("Not found: %s", report.absolute_url())
 
     def __call__(self):
+        """
+        site = api.portal.get()
+        catalog = getToolByName(site, "portal_catalog")
+        brains = catalog.searchResults(portal_type="insitu.report")
+
+        for brain in brains:
+            report = brain.getObject()
+            self._fix_date_for_report(report)
+        """
+        return None  # already imported
+
+
+class SyncInsituReportsCreationDate(BrowserView):
+    """Publishing date is already set. Update creation date."""
+
+    def _fix_date_for_report(self, report):
+        """Update creation date for report"""
+
+        def updateCreationDate(obj, value):
+            """Update publication date for obj"""
+            setattr(obj, "creation_date", value)
+            obj.reindexObject()
+            transaction.commit()
+
+        if report.effective().year() > 2000:
+            date = report.effective()
+            updateCreationDate(report, date)
+            logger.info("Updated: %s <-- %s", report.absolute_url(), date)
+
+    def __call__(self):
         site = api.portal.get()
         catalog = getToolByName(site, "portal_catalog")
         brains = catalog.searchResults(portal_type="insitu.report")
