@@ -108,7 +108,6 @@ class ImportInsituReportsDates(BrowserView):
             logger.info("Not found: %s", report.absolute_url())
 
     def __call__(self):
-        return None  # already imported
         """
         site = api.portal.get()
         catalog = getToolByName(site, "portal_catalog")
@@ -118,6 +117,7 @@ class ImportInsituReportsDates(BrowserView):
             report = brain.getObject()
             self._fix_date_for_report(report)
         """
+        return None  # already imported
 
 
 class SyncInsituReportsCreationDate(BrowserView):
