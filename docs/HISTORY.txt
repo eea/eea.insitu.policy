@@ -1,6 +1,11 @@
 Changelog
 =========
 
+2.1 - (2024-04-23)
+---------------------------
+* Change: Report layout. Components, Themes multi-select.
+  [GhitaB]
+
 2.0 - (2024-04-22)
 ---------------------------
 * Change: Migrate date for reports from old website related files.

@@ -4,6 +4,18 @@
   i18n_domain="eea">
 
   <genericsetup:upgradeSteps
+    source="1.4"
+    destination="1.5"
+    profile="eea.insitu.policy:default">
+
+    <genericsetup:upgradeDepends
+        title="Update catalog"
+        description="Add catalog columns for Copernicus Components and Themes."
+        import_steps="catalog"
+      />
+  </genericsetup:upgradeSteps>
+
+  <genericsetup:upgradeSteps
     source="1.3"
     destination="1.4"
     profile="eea.insitu.policy:default">

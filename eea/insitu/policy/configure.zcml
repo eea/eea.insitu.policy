@@ -14,17 +14,17 @@
     />
 
   <utility
+    name="eea.insitu.policy.report_categories"
+    component=".vocabulary.report_categories"
+    />
+
+  <utility
     name="eea.insitu.policy.copernicus_components"
-    component=".vocabulary.copernicus_components"
+    component=".vocabulary.CopernicusComponentsVocabularyFactory"
     />
 
   <utility
     name="eea.insitu.policy.copernicus_themes"
-    component=".vocabulary.copernicus_themes"
-    />
-
-  <utility
-    name="eea.insitu.policy.report_categories"
-    component=".vocabulary.report_categories"
+    component=".vocabulary.CopernicusThemesVocabularyFactory"
     />
 </configure>

@@ -11,11 +11,14 @@ from zope.interface import provider
 class ICopernicusComponents(model.Schema):
     """Copernicus Components behavior"""
 
-    copernicus_components = schema.List(
-        title="Copernicus Components",
-        description="Select Copernicus Components",
-        required=False,
-        value_type=schema.Choice(
-            vocabulary="eea.insitu.policy.copernicus_components"),
+    directives.widget(
+        "copernicus_components",
+        vocabulary="eea.insitu.policy.copernicus_components"
     )
-    directives.write_permission(copernicus_components="cmf.ManagePortal")
+    copernicus_components = schema.Tuple(
+        title="Copernicus Components",
+        value_type=schema.TextLine(
+            title="Copernicus Component",
+            required=False,
+        ),
+    )
