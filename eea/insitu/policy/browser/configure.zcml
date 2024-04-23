@@ -8,7 +8,7 @@
     for="*"
     template="view.pt"
     class=".views.ImportInsituReports"
-    permission="zope2.View"
+    permission="cmf.ManagePortal"
     />
 
   <browser:page
@@ -16,7 +16,7 @@
     for="*"
     template="view.pt"
     class=".views.ImportInsituReportsDates"
-    permission="zope2.View"
+    permission="cmf.ManagePortal"
     />
 
   <browser:page
@@ -24,6 +24,27 @@
     for="*"
     template="view.pt"
     class=".views.SyncInsituReportsCreationDate"
-    permission="zope2.View"
+    permission="cmf.ManagePortal"
+    />
+
+  <browser:page
+    name="cis2_upload_file"
+    for="*"
+    template="cis2_upload_json.pt"
+    permission="cmf.ManagePortal"
+    />
+
+  <browser:page
+    name="cis2_save_json"
+    for="*"
+    class=".cis2_upload_json.CIS2SaveJSON"
+    permission="cmf.ManagePortal"
+    />
+
+  <browser:page
+    name="cis2_view_data"
+    for="*"
+    class=".cis2_view_data.CIS2ViewData"
+    permission="cmf.ManagePortal"
     />
 </configure>
