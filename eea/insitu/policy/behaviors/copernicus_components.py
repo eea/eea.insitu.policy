@@ -12,7 +12,8 @@ class ICopernicusComponents(model.Schema):
     """Copernicus Components behavior"""
 
     directives.widget(
-        "copernicus_components", vocabulary="eea.insitu.policy.copernicus_components"
+        "copernicus_components",
+        vocabulary="eea.insitu.policy.copernicus_components"
     )
     copernicus_components = schema.Tuple(
         title="Copernicus Components",
