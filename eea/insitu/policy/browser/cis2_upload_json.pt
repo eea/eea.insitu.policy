@@ -4,7 +4,7 @@
   <h1 i18n:translate="">Select the json file containing the definitions from CIS2</h1>
   <form action="./cis2_save_json" method="post" enctype="multipart/form-data">
     <input type="file" name="fileToUpload" id="fileToUpload" />
-    <input type="submit" value="Process JSON" name="submit" />
+    <button type="submit" name="submit">Process JSON</button>
   </form>
 </body>
 </html>
