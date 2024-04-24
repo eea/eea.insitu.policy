@@ -1,11 +1,14 @@
 # -*- coding: utf-8 -*-
 """Vocabularies"""
 
+from eea.insitu.policy.cis2.cis2_annot import get_annot
 from plone.app.vocabularies.catalog import KeywordsVocabulary as BKV
-from zope.schema.interfaces import IVocabularyFactory
-from zope.schema.vocabulary import SimpleTerm, SimpleVocabulary
 from zope.interface import alsoProvides
 from zope.interface import implementer
+from zope.interface import provider
+from zope.schema.interfaces import IContextSourceBinder
+from zope.schema.interfaces import IVocabularyFactory
+from zope.schema.vocabulary import SimpleTerm, SimpleVocabulary
 
 
 def generic_vocabulary(_terms, sort=True):
@@ -164,3 +167,18 @@ class KeywordsVocabulary(BKV):
 CopernicusComponentsVocabularyFactory = KeywordsVocabulary(
     "copernicus_components")
 CopernicusThemesVocabularyFactory = KeywordsVocabulary("copernicus_themes")
+
+
+def generate_data_providers_list(context):
+    """ TODO improve - generate the terms from json data
+    """
+    terms = [(str(x["id"]), str(x["id"])) for x in get_annot()]
+    return terms
+
+
+@provider(IContextSourceBinder)
+def get_terms(context):
+    """ https://5.docs.plone.org/external/plone.app.dexterity/docs/
+               /advanced/vocabularies.html#dynamic-sources
+    """
+    return generic_vocabulary(generate_data_providers_list(context))(context)
