@@ -25,4 +25,11 @@
         provides=".copernicus_themes.ICopernicusThemes"
         for="plone.dexterity.interfaces.IDexterityContent"
       />
+      <plone:behavior
+        name="insitu.reportbehavior"
+        title="Insitu Report Behavior"
+        description="Fields for insitu.report content type."
+        provides=".insitu_report.IInsituReportBehavior"
+        for="plone.dexterity.interfaces.IDexterityContent"
+      />
 </configure>

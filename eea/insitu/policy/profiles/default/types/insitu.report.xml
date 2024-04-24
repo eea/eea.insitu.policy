@@ -23,20 +23,28 @@
  <property name="behaviors">
   <element value="plone.dublincore"/>
   <element value="plone.namefromtitle"/>
+  <element value="insitu.reportbehavior"/>
+  <element value="volto.blocks.editable.layout"/>
+  <element value="insitu.copernicusservices"/>
  </property>
-
- <!-- schema and class used for content items -->
- <property name="schema">eea.insitu.policy.report.IInsituReport</property>
- <property name="klass">eea.insitu.policy.report.InsituReport</property>
-
+ <property name="schema"></property>
  <property
     name="model_source">&lt;model xmlns:i18n=&quot;http://xml.zope.org/namespaces/i18n&quot; xmlns:marshal=&quot;http://namespaces.plone.org/supermodel/marshal&quot; xmlns:form=&quot;http://namespaces.plone.org/supermodel/form&quot; xmlns:security=&quot;http://namespaces.plone.org/supermodel/security&quot; xmlns:indexer=&quot;http://namespaces.plone.org/supermodel/indexer&quot; xmlns:lingua=&quot;http://namespaces.plone.org/supermodel/lingua&quot; xmlns:users=&quot;http://namespaces.plone.org/supermodel/users&quot; xmlns=&quot;http://namespaces.plone.org/supermodel/schema&quot;&gt;
     &lt;schema&gt;
-      &lt;field name=&quot;file&quot; type=&quot;plone.namedfile.field.NamedBlobFile&quot;&gt;
-        &lt;description&gt;File containing the report, example: pdf&lt;/description&gt;
-        &lt;required&gt;False&lt;/required&gt;
-        &lt;title&gt;File&lt;/title&gt;
-      &lt;/field&gt;
+      &lt;fieldset name=&quot;layout&quot; label=&quot;Layout&quot;&gt;
+        &lt;field name=&quot;blocks&quot; type=&quot;plone.schema.jsonfield.JSONField&quot;&gt;
+          &lt;default&gt;{&#x27;8f42a81a-b124-45a6-90c0-bf6e75088f6e&#x27;: {&#x27;@type&#x27;: &#x27;metadata&#x27;, &#x27;data&#x27;: {&#x27;id&#x27;: &#x27;subjects&#x27;, &#x27;widget&#x27;: &#x27;tags&#x27;}}, &#x27;9428519c-5aac-4d0b-965a-b68eec687d2a&#x27;: {&#x27;@type&#x27;: &#x27;metadata&#x27;, &#x27;data&#x27;: {&#x27;id&#x27;: &#x27;file&#x27;, &#x27;widget&#x27;: &#x27;file&#x27;}}, &#x27;aedcbd67-ce54-4ed9-ab7f-5d53f50de758&#x27;: {&#x27;@type&#x27;: &#x27;slate&#x27;, &#x27;plaintext&#x27;: &#x27;Tags&#x27;, &#x27;value&#x27;: [{&#x27;children&#x27;: [{&#x27;text&#x27;: &#x27;Tags&#x27;}], &#x27;type&#x27;: &#x27;h3&#x27;}]}, &#x27;aff71626-8371-4eb3-bce0-4b836f58d69b&#x27;: {&#x27;@type&#x27;: &#x27;title&#x27;}, &#x27;bc26642b-7a1b-4958-b2be-eb8b906cee8b&#x27;: {&#x27;@type&#x27;: &#x27;description&#x27;, &#x27;value&#x27;: [{&#x27;children&#x27;: [{&#x27;text&#x27;: &#x27;Report description here&#x27;}], &#x27;type&#x27;: &#x27;p&#x27;}]}, &#x27;c42e726d-e183-4803-b943-1f312d04efd6&#x27;: {&#x27;@type&#x27;: &#x27;slate&#x27;, &#x27;value&#x27;: [{&#x27;type&#x27;: &#x27;h3&#x27;, &#x27;children&#x27;: [{&#x27;text&#x27;: &#x27;Copernicus components&#x27;}]}], &#x27;plaintext&#x27;: &#x27;Copernicus components&#x27;}, &#x27;undefined&#x27;: {&#x27;@type&#x27;: &#x27;slate&#x27;, &#x27;value&#x27;: [{&#x27;type&#x27;: &#x27;p&#x27;, &#x27;children&#x27;: [{&#x27;text&#x27;: &#x27;&#x27;}]}], &#x27;plaintext&#x27;: &#x27;&#x27;}, &#x27;45838f04-260e-4e85-9f73-bdce7d1b4e6e&#x27;: {&#x27;@type&#x27;: &#x27;metadata&#x27;, &#x27;data&#x27;: {&#x27;id&#x27;: &#x27;copernicus_services&#x27;, &#x27;widget&#x27;: &#x27;array&#x27;}}, &#x27;d476bc70-9ae8-4cf0-ac0c-8864f4504b1b&#x27;: {&#x27;@type&#x27;: &#x27;slate&#x27;}}&lt;/default&gt;
+          &lt;description/&gt;
+          &lt;required&gt;False&lt;/required&gt;
+          &lt;title&gt;Blocks&lt;/title&gt;
+        &lt;/field&gt;
+        &lt;field name=&quot;blocks_layout&quot; type=&quot;plone.schema.jsonfield.JSONField&quot;&gt;
+          &lt;default&gt;{&#x27;items&#x27;: [&#x27;aff71626-8371-4eb3-bce0-4b836f58d69b&#x27;, &#x27;bc26642b-7a1b-4958-b2be-eb8b906cee8b&#x27;, &#x27;9428519c-5aac-4d0b-965a-b68eec687d2a&#x27;, &#x27;aedcbd67-ce54-4ed9-ab7f-5d53f50de758&#x27;, &#x27;8f42a81a-b124-45a6-90c0-bf6e75088f6e&#x27;, &#x27;c42e726d-e183-4803-b943-1f312d04efd6&#x27;, &#x27;45838f04-260e-4e85-9f73-bdce7d1b4e6e&#x27;, &#x27;d476bc70-9ae8-4cf0-ac0c-8864f4504b1b&#x27;]}&lt;/default&gt;
+          &lt;description/&gt;
+          &lt;required&gt;False&lt;/required&gt;
+          &lt;title&gt;Blocks Layout&lt;/title&gt;
+        &lt;/field&gt;
+      &lt;/fieldset&gt;
     &lt;/schema&gt;
   &lt;/model&gt;</property>
  <property name="model_file"></property>

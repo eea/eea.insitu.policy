@@ -1,0 +1,10 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+    i18n:domain="plone">
+<body>
+  <h1 i18n:translate="">Select the json file containing the definitions from CIS2</h1>
+  <form action="./cis2_save_json" method="post" enctype="multipart/form-data">
+    <input type="file" name="fileToUpload" id="fileToUpload" />
+    <button type="submit" name="submit" i18n:translate="">Process JSON</button>
+  </form>
+</body>
+</html>
