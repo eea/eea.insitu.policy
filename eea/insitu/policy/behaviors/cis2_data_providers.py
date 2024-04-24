@@ -16,7 +16,6 @@ class ICIS2DataProvidersList(model.Schema):
         title="Data Providers",
         description="Select Data Providers",
         required=False,
-        # value_type=schema.Choice(vocabulary="eea.insitu.policy.cis2_data_providers"),
         value_type=schema.Choice(source=get_terms),
     )
     directives.write_permission(data_providers_list="cmf.ManagePortal")
