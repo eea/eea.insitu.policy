@@ -32,4 +32,11 @@
         provides=".insitu_report.IInsituReportBehavior"
         for="plone.dexterity.interfaces.IDexterityContent"
       />
+      <plone:behavior
+        name="insitu.cis2dataproviderslist"
+        title="CIS2 Data Providers List"
+        description="Select Data Providers."
+        provides=".cis2_data_providers.ICIS2DataProvidersList"
+        for="plone.dexterity.interfaces.IDexterityContent"
+      />
 </configure>

@@ -1,8 +1,14 @@
 Changelog
 =========
 
-2.3-dev0 - (unreleased)
+2.3 - (2024-04-25)
 ---------------------------
+* Change: CIS2 Data Providers behavior (WIP) [GhitaB]
+
+2.3 - (2024-04-25)
+---------------------------
+* Change: CIS2 Data Providers behavior (WIP)
+  [GhitaB]
 
 2.2 - (2024-04-23)
 ---------------------------

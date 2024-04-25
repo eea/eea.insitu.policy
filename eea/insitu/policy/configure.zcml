@@ -27,4 +27,9 @@
     name="eea.insitu.policy.copernicus_themes"
     component=".vocabulary.CopernicusThemesVocabularyFactory"
     />
+
+  <!-- <utility -->
+  <!--   name="eea.insitu.policy.cis2_data_providers" -->
+  <!--   component=".vocabulary.get_terms" -->
+  <!--   /> -->
 </configure>
