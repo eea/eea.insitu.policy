@@ -134,6 +134,13 @@ alsoProvides(copernicus_themes, IVocabularyFactory)
 
 _report_categories = (
     ("GENERAL", "General Reports on In Situ Data"),
+    ("GENERALATMO", "General Reports - Atmosphere"),
+    ("GENERALLAND", "General Reports - Land"),
+    ("GENERALWATER", "General Reports - Water"),
+    ("GENERALARCT", "General Reports - Arctic"),
+    ("GENERALMARINE", "General Reports - Marine"),
+    ("GENERALCROSS", "General Reports - Cross cutting"),
+    ("GENERALSPACE", "General Reports - Space"),
     ("NOV23", "Copernicus Working Group on Geospatial Data meeting "
         "(November 2023)"),
     (
