@@ -134,6 +134,13 @@ alsoProvides(copernicus_themes, IVocabularyFactory)
 
 _report_categories = (
     ("GENERAL", "General Reports on In Situ Data"),
+    ("GENERALATMO", "General Reports - Atmosphere"),
+    ("GENERALLAND", "General Reports - Land"),
+    ("GENERALWATER", "General Reports - Water"),
+    ("GENERALARCT", "General Reports - Arctic"),
+    ("GENERALMARINE", "General Reports - Marine"),
+    ("GENERALCROSS", "General Reports - Cross cutting"),
+    ("GENERALSPACE", "General Reports - Space"),
     ("NOV23", "Copernicus Working Group on Geospatial Data meeting "
         "(November 2023)"),
     (
@@ -170,15 +177,14 @@ CopernicusThemesVocabularyFactory = KeywordsVocabulary("copernicus_themes")
 
 
 def generate_data_providers_list(context):
-    """ TODO improve - generate the terms from json data
-    """
-    terms = [(str(x["id"]), str(x["id"])) for x in get_annot()]
+    """Generate the terms from json data saved in annotations"""
+    terms = [(str(x["id"]), str(x["name"])) for x in get_annot()]
     return terms
 
 
 @provider(IContextSourceBinder)
 def get_terms(context):
-    """ https://5.docs.plone.org/external/plone.app.dexterity/docs/
-               /advanced/vocabularies.html#dynamic-sources
+    """https://5.docs.plone.org/external/plone.app.dexterity/docs/
+    /advanced/vocabularies.html#dynamic-sources
     """
     return generic_vocabulary(generate_data_providers_list(context))(context)
