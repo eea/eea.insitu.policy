@@ -47,4 +47,11 @@
     class=".cis2_view_data.CIS2ViewData"
     permission="cmf.ManagePortal"
     />
+
+  <browser:page
+    name="gopdb"
+    for="*"
+    class=".admin.GoPDB"
+    permission="cmf.ManagePortal"
+    />
 </configure>
