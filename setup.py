@@ -52,5 +52,7 @@ setup(
     entry_points="""
     [z3c.autoinclude.plugin]
     target = plone
+    [zopectl.command]
+    import_cis2_data = eea.insitu.policy.cis2.cis2_import:main
     """,
 )
