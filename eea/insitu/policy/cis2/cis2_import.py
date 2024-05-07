@@ -3,11 +3,11 @@
 import logging
 import requests
 from eea.insitu.policy.cis2.cis2_annot import save_annot
-from plone import api
+
+# from plone import api
 from zope.component.hooks import setSite
 
 logger = logging.getLogger("eea.insitu.policy")
-# TODO - use ENV VAR
 TEST_URL = "https://raw.githubusercontent.com/GhitaB/sandbox/main/test2.json"
 
 
@@ -19,11 +19,13 @@ def download_json(url):
         json_data = response.json()
         return json_data
     except requests.exceptions.RequestException as e:
-        logger.error("CIS2 import - error:", e)
+        logger.error("CIS2 import - error:")
+        logger.error(e)
         return None
 
 
 def main(app, *args):
+    """Importer"""
     import pdb
 
     pdb.set_trace()
