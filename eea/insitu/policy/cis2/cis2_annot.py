@@ -1,9 +1,9 @@
 """Annotations for CIS2"""
 
+import logging
 from eea.insitu.policy.config import CIS2_ANNOT_KEY
 from plone import api
 from zope.annotation.interfaces import IAnnotations
-import logging
 
 logger = logging.getLogger("eea.insitu.policy")
 

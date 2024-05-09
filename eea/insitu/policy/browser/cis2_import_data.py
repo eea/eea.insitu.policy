@@ -1,10 +1,10 @@
 """A view to trigger CIS2 import. It uses a token saved as ENV VAR."""
 
+import logging
+import requests
 from Products.Five import BrowserView
 from eea.insitu.policy.cis2.cis2_annot import save_annot
 from eea.insitu.policy.cis2.utils import get_cis2_token, get_cis2_view_token
-import logging
-import requests
 
 
 logger = logging.getLogger("eea.insitu.policy")
