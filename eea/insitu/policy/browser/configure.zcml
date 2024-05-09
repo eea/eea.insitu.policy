@@ -47,4 +47,18 @@
     class=".cis2_view_data.CIS2ViewData"
     permission="cmf.ManagePortal"
     />
+
+  <browser:page
+    name="cis2_import_data"
+    for="*"
+    class=".cis2_import_data.CIS2ImportData"
+    permission="zope2.View"
+    />
+
+  <browser:page
+    name="gopdb"
+    for="*"
+    class=".admin.GoPDB"
+    permission="cmf.ManagePortal"
+    />
 </configure>

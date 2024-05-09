@@ -1,12 +1,11 @@
 """Annotations for CIS2"""
 
 import logging
+from eea.insitu.policy.config import CIS2_ANNOT_KEY
 from plone import api
 from zope.annotation.interfaces import IAnnotations
 
 logger = logging.getLogger("eea.insitu.policy")
-
-TEST_KEY = "test_cis2_1"
 
 
 def get_annot_container():
@@ -27,8 +26,8 @@ def init_annot(annot_key):
     logger.info("ANNOT: Init")
     container = get_annot_container()
     annot = IAnnotations(container)
-    if annot.get(TEST_KEY, None) is None:
-        create_annot(container, TEST_KEY)
+    if annot.get(CIS2_ANNOT_KEY, None) is None:
+        create_annot(container, CIS2_ANNOT_KEY)
 
 
 def save_annot(json_data):
@@ -36,7 +35,7 @@ def save_annot(json_data):
 
     logger.info("ANNOT: Saving...")
     # Config
-    annot_key = TEST_KEY
+    annot_key = CIS2_ANNOT_KEY
     container = get_annot_container()
 
     # Make sure annot exists
@@ -52,7 +51,7 @@ def get_annot():
     """Get json data from annotations"""
 
     # Config
-    annot_key = TEST_KEY
+    annot_key = CIS2_ANNOT_KEY
     container = get_annot_container()
 
     # Make sure annot exists

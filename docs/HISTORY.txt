@@ -1,6 +1,11 @@
 Changelog
 =========
 
+2.5 - (2024-05-09)
+---------------------------
+* Change: Develop
+  [GhitaB]
+
 2.4 - (2024-04-29)
 ---------------------------
 * Change: Add more report categories
