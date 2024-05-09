@@ -31,9 +31,23 @@ class CIS2ImportData(BrowserView):
         cis2_view_token = get_cis2_view_token()
         cis2_token = get_cis2_token()
 
-        import pdb
+        if cis2_view_token is None:
+            logger.info("CIS2 import - Canceled: missing view token ENV.")
+            return "fail"
 
-        pdb.set_trace()
+        if cis2_token is None:
+            logger.info("CIS2 import - Canceled: missing CIS2 token ENV.")
+            return "fail"
+
+        view_token = self.request.form.get("token", None)
+        if view_token is None:
+            logger.info("CIS2 import - Canceled: missing view token.")
+            return "missing view token"
+
+        if view_token != cis2_view_token:
+            logger.info("CIS2 import - Canceled: invalid view token.")
+            return "invalid view token"
+
         json_data = download_json(TEST_URL)
 
         if json_data:
