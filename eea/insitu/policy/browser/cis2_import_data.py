@@ -2,6 +2,7 @@
 
 from Products.Five import BrowserView
 from eea.insitu.policy.cis2.cis2_annot import save_annot
+from eea.insitu.policy.cis2.utils import get_cis2_token, get_cis2_view_token
 import logging
 import requests
 
@@ -27,6 +28,12 @@ class CIS2ImportData(BrowserView):
     """ "Import data from CIS2"""
 
     def __call__(self):
+        cis2_view_token = get_cis2_view_token()
+        cis2_token = get_cis2_token()
+
+        import pdb
+
+        pdb.set_trace()
         json_data = download_json(TEST_URL)
 
         if json_data:
