@@ -7,6 +7,7 @@
   <include package=".behaviors" />
   <include package=".browser" />
   <include package=".upgrades" />
+  <include package=".restapi" />
 
   <utility
     name="eea.insitu.policy.copernicus_services"
