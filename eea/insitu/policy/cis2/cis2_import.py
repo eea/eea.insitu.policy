@@ -1,9 +1,9 @@
 """Import definitions from CIS2"""
 
-from eea.insitu.policy.cis2.cis2_annot import save_annot
-from eea.insitu.policy.cis2.cis2_auth import cis2_auth
 import requests
 import logging
+from eea.insitu.policy.cis2.cis2_annot import save_annot
+from eea.insitu.policy.cis2.cis2_auth import cis2_auth
 
 logger = logging.getLogger("eea.insitu.policy")
 
