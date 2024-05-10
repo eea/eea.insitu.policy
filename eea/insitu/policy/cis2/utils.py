@@ -3,6 +3,7 @@
 from eea.insitu.policy.config import (
     CIS2_IMPORT_TOKEN_ENV_VAR,
     CIS2_IMPORT_VIEW_TOKEN_ENV_VAR,
+    CIS2_URL_ENV_VAR,
 )
 from eea.insitu.policy.browser.utils import get_env_var
 from eea.insitu.policy.cis2.cis2_annot import get_annot
@@ -16,6 +17,11 @@ def get_cis2_view_token():
 def get_cis2_token():
     """The token used to connect to CIS2"""
     return get_env_var(CIS2_IMPORT_TOKEN_ENV_VAR)
+
+
+def get_cis2_url():
+    """The url used to connect to CIS2"""
+    return get_env_var(CIS2_URL_ENV_VAR)
 
 
 def data_providers_list(data_providers_ids):
