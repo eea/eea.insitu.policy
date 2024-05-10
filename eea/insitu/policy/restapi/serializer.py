@@ -23,8 +23,8 @@ class DataProvidersListFieldSerializer(DefaultFieldSerializer):
         )
         if self.field.__name__ == "data_providers_list":
             if (
-                self.request.get("HTTP_REFERER", None)
-                and "/edit" in self.request["HTTP_REFERER"]
+                self.request.get("HTTP_REFERER", None) and
+                "/edit" in self.request["HTTP_REFERER"]
             ):
                 return value  # ['1', '2']
 
