@@ -1,7 +1,7 @@
 """Import definitions from CIS2"""
 
-import requests
 import logging
+import requests
 from eea.insitu.policy.cis2.cis2_annot import save_annot
 from eea.insitu.policy.cis2.cis2_auth import cis2_auth
 
