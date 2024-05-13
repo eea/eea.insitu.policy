@@ -29,6 +29,8 @@ def data_providers_list(data_providers_ids):
     Output: list of data providers (including details from annotations)"""
     data_providers = get_annot()
     res = []
+    if data_providers is None:
+        return res
 
     for data_provider in data_providers:
         if data_provider.get("id", None) is not None:
