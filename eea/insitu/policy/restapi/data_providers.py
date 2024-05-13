@@ -1,24 +1,26 @@
 """CIS2 Data Providers"""
 
-from eea.insitu.policy.cis2.utils import data_providers_details
 from plone.restapi.interfaces import IExpandableElement
+from plone.restapi.services import Service
+from eea.insitu.policy.cis2.utils import data_providers_details
 from eea.insitu.policy.interfaces import IEeaInsituPolicyLayer
-from eea.insitu.policy.behaviors.cis2_data_providers import ICIS2DataProvidersList
+from eea.insitu.policy.behaviors.cis2_data_providers import (
+    ICIS2DataProvidersList)
 from zope.component import adapter
 from zope.interface import implementer
-from plone.restapi.services import Service
-from zope.interface import Interface
-from eea.insitu.policy.cis2.utils import data_providers_details
 
 
 @implementer(IExpandableElement)
 @adapter(ICIS2DataProvidersList, IEeaInsituPolicyLayer)
 class DataProvidersDetails(object):
+    """Data providers details from CIS2 json file"""
+
     def __init__(self, context, request):
         self.context = context
         self.request = request
 
     def get_data_providers(self):
+        """Data providers details list"""
         data_providers_ids = self.context.data_providers_list
         return data_providers_details(data_providers_ids)
 
@@ -27,6 +29,9 @@ class DataProvidersDetails(object):
 
 
 class DataProvidersDetailsGet(Service):
+    """Data providers details"""
+
     def reply(self):
+        """Data providers"""
         data_providers = DataProvidersDetails(self.context, self.request)
         return data_providers
