@@ -24,11 +24,13 @@ def get_cis2_url():
     return get_env_var(CIS2_URL_ENV_VAR)
 
 
-def data_providers_list(data_providers_ids):
+def data_providers_details(data_providers_ids):
     """Input: list of data providers ids
     Output: list of data providers (including details from annotations)"""
     data_providers = get_annot()
     res = []
+    if data_providers is None:
+        return res
 
     for data_provider in data_providers:
         if data_provider.get("id", None) is not None:

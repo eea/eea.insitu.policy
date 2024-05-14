@@ -18,19 +18,4 @@
     name="eea.insitu.policy.report_categories"
     component=".vocabulary.report_categories"
     />
-
-  <utility
-    name="eea.insitu.policy.copernicus_components"
-    component=".vocabulary.CopernicusComponentsVocabularyFactory"
-    />
-
-  <utility
-    name="eea.insitu.policy.copernicus_themes"
-    component=".vocabulary.CopernicusThemesVocabularyFactory"
-    />
-
-  <!-- <utility -->
-  <!--   name="eea.insitu.policy.cis2_data_providers" -->
-  <!--   component=".vocabulary.get_terms" -->
-  <!--   /> -->
 </configure>

@@ -4,6 +4,17 @@
   xmlns:zcml="http://namespaces.zope.org/zcml"
   xmlns:plone="http://namespaces.plone.org/plone">
 
-  <adapter factory=".serializer.DataProvidersListFieldSerializer" />
+  <adapter
+    factory=".data_providers.DataProvidersDetails"
+    name="data_providers_details"
+    />
 
+  <plone:service
+    method="GET"
+    factory=".data_providers.DataProvidersDetailsGet"
+    for="zope.interface.Interface"
+    permission="zope2.View"
+    name="@data_providers_details"
+    layer="eea.insitu.policy.interfaces.IEeaInsituPolicyLayer"
+    />
 </configure>

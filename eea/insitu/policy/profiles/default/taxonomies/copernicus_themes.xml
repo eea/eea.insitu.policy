@@ -1,0 +1,224 @@
+<?xml version='1.0' encoding='utf-8'?>
+<vdex xmlns="http://www.imsglobal.org/xsd/imsvdex_v1p0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsvdex_v1p0 imsvdex_v1p0.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd" orderSignificant="false" profileType="hierarchicalTokenTerms" language="en">
+  <vocabName>
+    <langstring language="en">Copernicus Themes</langstring>
+  </vocabName>
+  <vocabIdentifier>copernicus_themes</vocabIdentifier>
+
+  <term>
+    <termIdentifier>ADDRESSES</termIdentifier>
+    <caption>
+      <langstring language="en">Addresses</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>ADMINISTRATIVEUNITS</termIdentifier>
+    <caption>
+      <langstring language="en">Administrative units</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>CADASTRALPARCELS</termIdentifier>
+    <caption>
+      <langstring language="en">Cadastral parcels</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>COORDINATEREFERENCE</termIdentifier>
+    <caption>
+      <langstring language="en">Coordinate reference systems</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>GEOGRAPHICALGRID</termIdentifier>
+    <caption>
+      <langstring language="en">Geographical grid systems</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>GEOGRAPHICALNAMES</termIdentifier>
+    <caption>
+      <langstring language="en">Geographical names</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>HYDROGRAPHY</termIdentifier>
+    <caption>
+      <langstring language="en">Hydrography</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>PROTECTEDSITES</termIdentifier>
+    <caption>
+      <langstring language="en">Protected sites</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>TRANSPORTNETWORKS</termIdentifier>
+    <caption>
+      <langstring language="en">Transport networks</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>ELEVATION</termIdentifier>
+    <caption>
+      <langstring language="en">Elevation</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>GEOLOGY</termIdentifier>
+    <caption>
+      <langstring language="en">Geology</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>LANDCOVER</termIdentifier>
+    <caption>
+      <langstring language="en">Land cover</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>ORTHOIMAGERY</termIdentifier>
+    <caption>
+      <langstring language="en">Orthoimagery</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>AGRICULTURALAQUACULTURE</termIdentifier>
+    <caption>
+      <langstring language="en">Agricultural and aquaculture facilities</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>AREAMANAGEMENT</termIdentifier>
+    <caption>
+      <langstring language="en">Area management/restriction/regulation zones and reporting units</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>ATMOSPHERICCONDITIONS</termIdentifier>
+    <caption>
+      <langstring language="en">Atmospheric conditions</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>BIOGEOGRAPHICALREGIONS</termIdentifier>
+    <caption>
+      <langstring language="en">Bio-geographical regions</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>BUILDINGS</termIdentifier>
+    <caption>
+      <langstring language="en">Buildings</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>ENERGYRESOURCES</termIdentifier>
+    <caption>
+      <langstring language="en">Energy resources</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>ENVIRONMENTALMONITORING</termIdentifier>
+    <caption>
+      <langstring language="en">Environmental monitoring facilities</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>HABITATSANDBIOTOPES</termIdentifier>
+    <caption>
+      <langstring language="en">Habitats and biotopes</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>HUMANHEALTHANDSAFETY</termIdentifier>
+    <caption>
+      <langstring language="en">Human health and safety</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>LANDUSE</termIdentifier>
+    <caption>
+      <langstring language="en">Land use</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>METEOROLOGICALGEOGRAPHICAL</termIdentifier>
+    <caption>
+      <langstring language="en">Meteorological geographical features</langstring>
+    </caption>
+  </term>
+  <term>
+      <termIdentifier>MINERALRESOURCES</termIdentifier>
+      <caption>
+          <langstring language="en">Mineral resources</langstring>
+      </caption>
+  </term>
+  <term>
+      <termIdentifier>NATURALRISK</termIdentifier>
+      <caption>
+          <langstring language="en">Natural risk zones</langstring>
+      </caption>
+  </term>
+  <term>
+      <termIdentifier>OCEANOGRAPHICGEOGRAPHICAL</termIdentifier>
+      <caption>
+          <langstring language="en">Oceanographic geographical features</langstring>
+      </caption>
+  </term>
+  <term>
+      <termIdentifier>POPULATIONDISTRIBUTION</termIdentifier>
+      <caption>
+          <langstring language="en">Population distribution and demography</langstring>
+      </caption>
+  </term>
+  <term>
+      <termIdentifier>PRODUCTIONINDUSTRIAL</termIdentifier>
+      <caption>
+          <langstring language="en">Production and industrial facilities</langstring>
+      </caption>
+  </term>
+  <term>
+      <termIdentifier>SEAREGIONS</termIdentifier>
+      <caption>
+          <langstring language="en">Sea regions</langstring>
+      </caption>
+  </term>
+  <term>
+      <termIdentifier>SOIL</termIdentifier>
+      <caption>
+          <langstring language="en">Soil</langstring>
+      </caption>
+  </term>
+  <term>
+      <termIdentifier>SPECIESDISTRIBUTION</termIdentifier>
+      <caption>
+          <langstring language="en">Species distribution</langstring>
+      </caption>
+  </term>
+  <term>
+      <termIdentifier>STATISTICALUNITS</termIdentifier>
+      <caption>
+          <langstring language="en">Statistical units</langstring>
+      </caption>
+  </term>
+  <term>
+      <termIdentifier>UTILITYGOVERNMENTAL</termIdentifier>
+      <caption>
+          <langstring language="en">Utility and governmental services</langstring>
+      </caption>
+  </term>
+  <term>
+    <termIdentifier>NA</termIdentifier>
+    <caption>
+      <langstring language="en">N/A</langstring>
+    </caption>
+  </term>
+  <term>
+    <termIdentifier>TBD</termIdentifier>
+    <caption>
+      <langstring language="en">TBD</langstring>
+    </caption>
+  </term>
+</vdex>

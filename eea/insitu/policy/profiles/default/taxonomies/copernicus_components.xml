@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='utf-8'?>
+<vdex xmlns="http://www.imsglobal.org/xsd/imsvdex_v1p0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsvdex_v1p0 imsvdex_v1p0.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd" orderSignificant="false" profileType="hierarchicalTokenTerms" language="en">
+  <vocabName>
+    <langstring language="en">Copernicus Components</langstring>
+  </vocabName>
+  <vocabIdentifier>copernicus_components</vocabIdentifier>
+  <term>
+      <termIdentifier>MWR</termIdentifier>
+      <caption>
+          <langstring language="en">Micro-Wave Radiometer</langstring>
+      </caption>
+  </term>
+  <term>
+      <termIdentifier>SRAL</termIdentifier>
+      <caption>
+          <langstring language="en">Synthetic Aperture Radar Altimeter</langstring>
+      </caption>
+  </term>
+  <term>
+      <termIdentifier>OLCI</termIdentifier>
+      <caption>
+          <langstring language="en">Ocean and Land Colour Instrument</langstring>
+      </caption>
+  </term>
+  <term>
+      <termIdentifier>SLSTR</termIdentifier>
+      <caption>
+          <langstring language="en">Sea and Land Surface Temperature Radiometer</langstring>
+      </caption>
+  </term>
+  <term>
+      <termIdentifier>SLSTROLCI</termIdentifier>
+      <caption>
+          <langstring language="en">Sea and Land Surface Temperature Radiometer/Ocean and Land Colour Instrument</langstring>
+      </caption>
+  </term>
+  <term>
+      <termIdentifier>TROPOMI</termIdentifier>
+      <caption>
+          <langstring language="en">TROPOspheric Monitoring Instrument</langstring>
+      </caption>
+  </term>
+  <term>
+      <termIdentifier>SEN5</termIdentifier>
+      <caption>
+          <langstring language="en">Sentinel-5 Sentinel-5p</langstring>
+      </caption>
+  </term>
+  <term>
+      <termIdentifier>SENOCEAN</termIdentifier>
+      <caption>
+          <langstring language="en">Se-3-Ocean Sentinel-3-Ocean</langstring>
+      </caption>
+  </term>
+  <term>
+      <termIdentifier>SENLAND</termIdentifier>
+      <caption>
+          <langstring language="en">Sen-3-Land Sentinel-3-Land</langstring>
+      </caption>
+  </term>
+  <term>
+      <termIdentifier>RM</termIdentifier>
+      <caption>
+          <langstring language="en">Rapid Mapping</langstring>
+      </caption>
+  </term>
+  <term>
+      <termIdentifier>EWC</termIdentifier>
+      <caption>
+          <langstring language="en">Early Warning</langstring>
+      </caption>
+  </term>
+  <term>
+      <termIdentifier>RR</termIdentifier>
+      <caption>
+          <langstring language="en">Risk and Recovery</langstring>
+      </caption>
+  </term>
+  <term>
+      <termIdentifier>CCC</termIdentifier>
+      <caption>
+          <langstring language="en">Climate Change</langstring>
+      </caption>
+  </term>
+  <term>
+      <termIdentifier>LLC</termIdentifier>
+      <caption>
+          <langstring language="en">Local Land</langstring>
+      </caption>
+  </term>
+  <term>
+      <termIdentifier>PLC</termIdentifier>
+      <caption>
+          <langstring language="en">Pan-European Land</langstring>
+      </caption>
+  </term>
+  <term>
+      <termIdentifier>GLC</termIdentifier>
+      <caption>
+          <langstring language="en">Global Land</langstring>
+      </caption>
+  </term>
+  <term>
+      <termIdentifier>PRIOR</termIdentifier>
+      <caption>
+          <langstring language="en">Priority Area Monitoring</langstring>
+      </caption>
+  </term>
+  <term>
+      <termIdentifier>LANDCOVER</termIdentifier>
+      <caption>
+          <langstring language="en">Land Cover and Land Use Mapping</langstring>
+      </caption>
+  </term>
+  <term>
+      <termIdentifier>BIOGEO</termIdentifier>
+      <caption>
+          <langstring language="en">Bio-geophysical Parameters</langstring>
+      </caption>
+  </term>
+  <term>
+      <termIdentifier>SATDATA</termIdentifier>
+      <caption>
+          <langstring language="en">Satellite Data</langstring>
+      </caption>
+  </term>
+  <term>
+      <termIdentifier>REFVAL</termIdentifier>
+      <caption>
+          <langstring language="en">Reference and Validation Data</langstring>
+      </caption>
+  </term>
+  <term>
+      <termIdentifier>GROUND</termIdentifier>
+      <caption>
+          <langstring language="en">Ground Motion Monitoring</langstring>
+      </caption>
+  </term>
+  <term>
+      <termIdentifier>BSC</termIdentifier>
+      <caption>
+          <langstring language="en">Border Surveillance</langstring>
+      </caption>
+  </term>
+  <term>
+      <termIdentifier>MSC</termIdentifier>
+      <caption>
+          <langstring language="en">Maritime Surveillance</langstring>
+      </caption>
+  </term>
+  <term>
+      <termIdentifier>SESA</termIdentifier>
+      <caption>
+          <langstring language="en">Support to EU External and Security Actions</langstring>
+      </caption>
+  </term>
+  <term>
+      <termIdentifier>AMC</termIdentifier>
+      <caption>
+          <langstring language="en">Atmosphere Monitoring</langstring>
+      </caption>
+  </term>
+  <term>
+      <termIdentifier>MMC</termIdentifier>
+      <caption>
+          <langstring language="en">Marine Environment Monitoring</langstring>
+      </caption>
+  </term>
+</vdex>
