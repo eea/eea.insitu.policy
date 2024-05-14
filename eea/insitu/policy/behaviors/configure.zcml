@@ -12,20 +12,6 @@
         for="plone.dexterity.interfaces.IDexterityContent"
       />
       <plone:behavior
-        name="insitu.copernicuscomponents"
-        title="Copernicus Components"
-        description="Select Copernicus Components."
-        provides=".copernicus_components.ICopernicusComponents"
-        for="plone.dexterity.interfaces.IDexterityContent"
-      />
-      <plone:behavior
-        name="insitu.copernicusthemes"
-        title="Copernicus Themes"
-        description="Select Copernicus Themes."
-        provides=".copernicus_themes.ICopernicusThemes"
-        for="plone.dexterity.interfaces.IDexterityContent"
-      />
-      <plone:behavior
         name="insitu.reportbehavior"
         title="Insitu Report Behavior"
         description="Fields for insitu.report content type."
