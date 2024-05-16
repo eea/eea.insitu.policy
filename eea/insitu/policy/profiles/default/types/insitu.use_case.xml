@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<object name="insitu.use_case" meta_type="Dexterity FTI" i18n:domain="plone"
+   xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+ <property name="title" i18n:translate="">Use Case</property>
+ <property name="description" i18n:translate="">Use Case</property>
+ <property name="icon_expr">string:file-earmark-text</property>
+ <property name="factory">insitu.use_case</property>
+ <property
+    name="add_view_expr">string:${folder_url}/++add++insitu.use_case</property>
+ <property name="link_target"></property>
+ <property name="immediate_view">view</property>
+ <property name="global_allow">True</property>
+ <property name="filter_content_types">True</property>
+ <property name="allowed_content_types"/>
+ <property name="allow_discussion">False</property>
+ <property name="default_view">view</property>
+ <property name="view_methods">
+  <element value="view"/>
+ </property>
+ <property name="default_view_fallback">False</property>
+ <property name="add_permission">cmf.AddPortalContent</property>
+ <property name="klass">plone.dexterity.content.Container</property>
+ <property name="behaviors">
+  <element value="plone.namefromtitle"/>
+  <element value="volto.blocks.editable.layout"/>
+  <element value="plone.categorization"/>
+  <element value="collective.taxonomy.generated.copernicus_components"/>
+  <element value="insitu.copernicusservices"/>
+  <element value="collective.taxonomy.generated.copernicus_themes"/>
+  <element value="plone.publication"/>
+  <element value="eea.coremetadata.behavior"/>
+  <element value="plone.leadimage"/>
+  <element value="plone.ownership"/>
+  <element value="volto.preview_image"/>
+ </property>
+ <property name="schema"></property>
+ <property
+    name="model_source">&lt;model xmlns:i18n=&quot;http://xml.zope.org/namespaces/i18n&quot; xmlns:marshal=&quot;http://namespaces.plone.org/supermodel/marshal&quot; xmlns:form=&quot;http://namespaces.plone.org/supermodel/form&quot; xmlns:security=&quot;http://namespaces.plone.org/supermodel/security&quot; xmlns:indexer=&quot;http://namespaces.plone.org/supermodel/indexer&quot; xmlns:lingua=&quot;http://namespaces.plone.org/supermodel/lingua&quot; xmlns:users=&quot;http://namespaces.plone.org/supermodel/users&quot; xmlns=&quot;http://namespaces.plone.org/supermodel/schema&quot;&gt;
+    &lt;schema&gt;
+      &lt;field name=&quot;locality&quot; type=&quot;zope.schema.TextLine&quot;&gt;
+        &lt;description/&gt;
+        &lt;required&gt;False&lt;/required&gt;
+        &lt;title&gt;Locality&lt;/title&gt;
+      &lt;/field&gt;
+      &lt;field name=&quot;references&quot; type=&quot;plone.app.textfield.RichText&quot;&gt;
+        &lt;description&gt;optional text Source name - Link - Date&lt;/description&gt;
+        &lt;required&gt;False&lt;/required&gt;
+        &lt;title&gt;References&lt;/title&gt;
+      &lt;/field&gt;
+      &lt;fieldset name=&quot;layout&quot; label=&quot;Layout&quot;&gt;
+        &lt;field name=&quot;blocks&quot; type=&quot;plone.schema.jsonfield.JSONField&quot;&gt;
+          &lt;default&gt;{&#x27;7f00f08a-9185-4a46-b661-893ea141a491&#x27;: {&#x27;@type&#x27;: &#x27;title&#x27;}, &#x27;a0a41dec-8b1c-47de-85f8-888e4afc0a62&#x27;: {&#x27;@type&#x27;: &#x27;description&#x27;}, &#x27;undefined&#x27;: {&#x27;@type&#x27;: &#x27;metadata&#x27;, &#x27;data&#x27;: {&#x27;id&#x27;: &#x27;references&#x27;, &#x27;widget&#x27;: &#x27;richtext&#x27;}}, &#x27;34465f8b-b4d9-4fa8-9fbb-5f0fe8b27514&#x27;: {&#x27;@type&#x27;: &#x27;slate&#x27;, &#x27;value&#x27;: [{&#x27;type&#x27;: &#x27;h3&#x27;, &#x27;children&#x27;: [{&#x27;text&#x27;: &#x27;Topics&#x27;}]}], &#x27;plaintext&#x27;: &#x27;Topics&#x27;}, &#x27;28b71f1a-f25b-43c0-a32f-afeba27bea6b&#x27;: {&#x27;@type&#x27;: &#x27;metadata&#x27;, &#x27;data&#x27;: {&#x27;id&#x27;: &#x27;topics&#x27;, &#x27;widget&#x27;: &#x27;array&#x27;}}, &#x27;8e902c0b-4d4e-4716-8a67-ac316a312f2a&#x27;: {&#x27;@type&#x27;: &#x27;slate&#x27;, &#x27;value&#x27;: [{&#x27;children&#x27;: [{&#x27;text&#x27;: &#x27;Geographic coverage&#x27;}], &#x27;type&#x27;: &#x27;h3&#x27;}], &#x27;plaintext&#x27;: &#x27;Geographic coverage&#x27;}, &#x27;30733324-731f-4ec6-b182-c8129d94ce98&#x27;: {&#x27;@type&#x27;: &#x27;slate&#x27;, &#x27;value&#x27;: [{&#x27;children&#x27;: [{&#x27;text&#x27;: &#x27;Temporal coverage&#x27;}], &#x27;type&#x27;: &#x27;h3&#x27;}], &#x27;plaintext&#x27;: &#x27;Temporal coverage&#x27;}, &#x27;045f9aa6-804f-4991-ac6c-58fda7657e69&#x27;: {&#x27;@type&#x27;: &#x27;slate&#x27;, &#x27;value&#x27;: [{&#x27;children&#x27;: [{&#x27;text&#x27;: &#x27;Publisher&#x27;}], &#x27;type&#x27;: &#x27;h3&#x27;}], &#x27;plaintext&#x27;: &#x27;Publisher&#x27;}, &#x27;cf456f07-4e24-43ad-9b23-94ab8c59d30f&#x27;: {&#x27;@type&#x27;: &#x27;slate&#x27;, &#x27;value&#x27;: [{&#x27;children&#x27;: [{&#x27;text&#x27;: &#x27;Copernicus Components&#x27;}], &#x27;type&#x27;: &#x27;h3&#x27;}], &#x27;plaintext&#x27;: &#x27;Copernicus Components&#x27;}, &#x27;32755f71-eedd-421e-937b-c1f917a7214b&#x27;: {&#x27;@type&#x27;: &#x27;slate&#x27;, &#x27;value&#x27;: [{&#x27;children&#x27;: [{&#x27;text&#x27;: &#x27;Copernicus Themes&#x27;}], &#x27;type&#x27;: &#x27;h3&#x27;}], &#x27;plaintext&#x27;: &#x27;Copernicus Themes&#x27;}, &#x27;c6e1549c-7853-426b-96f2-4e3c8a4cf142&#x27;: {&#x27;@type&#x27;: &#x27;slate&#x27;, &#x27;value&#x27;: [{&#x27;children&#x27;: [{&#x27;text&#x27;: &#x27;Locality&#x27;}], &#x27;type&#x27;: &#x27;h3&#x27;}], &#x27;plaintext&#x27;: &#x27;Locality&#x27;}, &#x27;262cd255-1834-47ff-827b-ddf5cadfae61&#x27;: {&#x27;@type&#x27;: &#x27;slate&#x27;, &#x27;value&#x27;: [{&#x27;children&#x27;: [{&#x27;text&#x27;: &#x27;References&#x27;}], &#x27;type&#x27;: &#x27;h3&#x27;}], &#x27;plaintext&#x27;: &#x27;References&#x27;}, &#x27;85fd49c1-3cb1-4eaa-b3cd-37a7efffe5e4&#x27;: {&#x27;@type&#x27;: &#x27;metadata&#x27;, &#x27;data&#x27;: {&#x27;id&#x27;: &#x27;geo_coverage&#x27;, &#x27;widget&#x27;: &#x27;geolocation&#x27;}}, &#x27;891cfc6a-6bd1-4820-9f9d-36854127f6be&#x27;: {&#x27;@type&#x27;: &#x27;metadata&#x27;, &#x27;data&#x27;: {&#x27;id&#x27;: &#x27;temporal_coverage&#x27;, &#x27;widget&#x27;: &#x27;temporal&#x27;}}, &#x27;0e8a03fa-b31d-40ea-8204-c125d7f746c6&#x27;: {&#x27;@type&#x27;: &#x27;metadata&#x27;, &#x27;data&#x27;: {&#x27;id&#x27;: &#x27;publisher&#x27;, &#x27;widget&#x27;: &#x27;array&#x27;}}, &#x27;0b5691b2-4399-4c46-8071-284f21d4f43f&#x27;: {&#x27;@type&#x27;: &#x27;metadata&#x27;, &#x27;data&#x27;: {&#x27;id&#x27;: &#x27;copernicus_services&#x27;, &#x27;widget&#x27;: &#x27;array&#x27;}}, &#x27;a7006e11-a19f-4be6-afc5-740606831946&#x27;: {&#x27;@type&#x27;: &#x27;metadata&#x27;, &#x27;data&#x27;: {&#x27;id&#x27;: &#x27;taxonomy_copernicus_components&#x27;, &#x27;widget&#x27;: &#x27;array&#x27;}}, &#x27;6eefaac1-cd61-4b9a-9e67-c31117d28201&#x27;: {&#x27;@type&#x27;: &#x27;metadata&#x27;, &#x27;data&#x27;: {&#x27;id&#x27;: &#x27;taxonomy_copernicus_themes&#x27;, &#x27;widget&#x27;: &#x27;array&#x27;}}, &#x27;4e9e61cc-43ef-418b-984b-3ff8e6846862&#x27;: {&#x27;@type&#x27;: &#x27;metadata&#x27;, &#x27;data&#x27;: {&#x27;id&#x27;: &#x27;locality&#x27;, &#x27;widget&#x27;: &#x27;string&#x27;}}, &#x27;5ce97b80-cac9-4ffa-b39a-8078e7d9f6f2&#x27;: {&#x27;@type&#x27;: &#x27;metadata&#x27;, &#x27;data&#x27;: {&#x27;id&#x27;: &#x27;references&#x27;, &#x27;widget&#x27;: &#x27;richtext&#x27;}}}&lt;/default&gt;
+          &lt;description/&gt;
+          &lt;required&gt;False&lt;/required&gt;
+          &lt;title&gt;Blocks&lt;/title&gt;
+        &lt;/field&gt;
+        &lt;field name=&quot;blocks_layout&quot; type=&quot;plone.schema.jsonfield.JSONField&quot;&gt;
+          &lt;default&gt;{&#x27;items&#x27;: [&#x27;7f00f08a-9185-4a46-b661-893ea141a491&#x27;, &#x27;a0a41dec-8b1c-47de-85f8-888e4afc0a62&#x27;, &#x27;34465f8b-b4d9-4fa8-9fbb-5f0fe8b27514&#x27;, &#x27;28b71f1a-f25b-43c0-a32f-afeba27bea6b&#x27;, &#x27;8e902c0b-4d4e-4716-8a67-ac316a312f2a&#x27;, &#x27;85fd49c1-3cb1-4eaa-b3cd-37a7efffe5e4&#x27;, &#x27;30733324-731f-4ec6-b182-c8129d94ce98&#x27;, &#x27;891cfc6a-6bd1-4820-9f9d-36854127f6be&#x27;, &#x27;045f9aa6-804f-4991-ac6c-58fda7657e69&#x27;, &#x27;0e8a03fa-b31d-40ea-8204-c125d7f746c6&#x27;, &#x27;cf456f07-4e24-43ad-9b23-94ab8c59d30f&#x27;, &#x27;0b5691b2-4399-4c46-8071-284f21d4f43f&#x27;, &#x27;a7006e11-a19f-4be6-afc5-740606831946&#x27;, &#x27;32755f71-eedd-421e-937b-c1f917a7214b&#x27;, &#x27;6eefaac1-cd61-4b9a-9e67-c31117d28201&#x27;, &#x27;c6e1549c-7853-426b-96f2-4e3c8a4cf142&#x27;, &#x27;4e9e61cc-43ef-418b-984b-3ff8e6846862&#x27;, &#x27;262cd255-1834-47ff-827b-ddf5cadfae61&#x27;, &#x27;5ce97b80-cac9-4ffa-b39a-8078e7d9f6f2&#x27;]}&lt;/default&gt;
+          &lt;description/&gt;
+          &lt;required&gt;False&lt;/required&gt;
+          &lt;title&gt;Blocks Layout&lt;/title&gt;
+        &lt;/field&gt;
+      &lt;/fieldset&gt;
+    &lt;/schema&gt;
+  &lt;/model&gt;</property>
+ <property name="model_file"></property>
+ <property name="schema_policy">dexterity</property>
+ <alias from="(Default)" to="(dynamic view)"/>
+ <alias from="edit" to="@@edit"/>
+ <alias from="sharing" to="@@sharing"/>
+ <alias from="view" to="(selected layout)"/>
+ <action title="View" action_id="view" category="object" condition_expr=""
+    icon_expr="string:toolbar-action/view" link_target=""
+    url_expr="string:${object_url}" visible="True">
+  <permission value="View"/>
+ </action>
+ <action title="Edit" action_id="edit" category="object" condition_expr=""
+    icon_expr="string:toolbar-action/edit" link_target=""
+    url_expr="string:${object_url}/edit" visible="True">
+  <permission value="Modify portal content"/>
+ </action>
+</object>
