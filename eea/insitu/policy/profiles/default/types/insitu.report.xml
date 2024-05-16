@@ -21,11 +21,16 @@
  <property name="add_permission">cmf.AddPortalContent</property>
  <property name="klass">plone.dexterity.content.Container</property>
  <property name="behaviors">
-  <element value="plone.dublincore"/>
   <element value="plone.namefromtitle"/>
   <element value="insitu.reportbehavior"/>
   <element value="volto.blocks.editable.layout"/>
   <element value="insitu.copernicusservices"/>
+  <element value="volto.preview_image"/>
+  <element value="eea.coremetadata.behavior"/>
+  <element value="volto.blocks"/>
+  <element value="plone.categorization"/>
+  <element value="plone.publication"/>
+  <element value="plone.ownership"/>
  </property>
  <property name="schema"></property>
  <property
@@ -33,7 +38,7 @@
     &lt;schema&gt;
       &lt;fieldset name=&quot;layout&quot; label=&quot;Layout&quot;&gt;
         &lt;field name=&quot;blocks&quot; type=&quot;plone.schema.jsonfield.JSONField&quot;&gt;
-          &lt;default&gt;{&#x27;8f42a81a-b124-45a6-90c0-bf6e75088f6e&#x27;: {&#x27;@type&#x27;: &#x27;metadata&#x27;, &#x27;data&#x27;: {&#x27;id&#x27;: &#x27;subjects&#x27;, &#x27;widget&#x27;: &#x27;tags&#x27;}}, &#x27;9428519c-5aac-4d0b-965a-b68eec687d2a&#x27;: {&#x27;@type&#x27;: &#x27;metadata&#x27;, &#x27;data&#x27;: {&#x27;id&#x27;: &#x27;file&#x27;, &#x27;widget&#x27;: &#x27;file&#x27;}}, &#x27;aedcbd67-ce54-4ed9-ab7f-5d53f50de758&#x27;: {&#x27;@type&#x27;: &#x27;slate&#x27;, &#x27;plaintext&#x27;: &#x27;Tags&#x27;, &#x27;value&#x27;: [{&#x27;children&#x27;: [{&#x27;text&#x27;: &#x27;Tags&#x27;}], &#x27;type&#x27;: &#x27;h3&#x27;}]}, &#x27;aff71626-8371-4eb3-bce0-4b836f58d69b&#x27;: {&#x27;@type&#x27;: &#x27;title&#x27;}, &#x27;bc26642b-7a1b-4958-b2be-eb8b906cee8b&#x27;: {&#x27;@type&#x27;: &#x27;description&#x27;, &#x27;value&#x27;: [{&#x27;children&#x27;: [{&#x27;text&#x27;: &#x27;Report description here&#x27;}], &#x27;type&#x27;: &#x27;p&#x27;}]}, &#x27;c42e726d-e183-4803-b943-1f312d04efd6&#x27;: {&#x27;@type&#x27;: &#x27;slate&#x27;, &#x27;value&#x27;: [{&#x27;type&#x27;: &#x27;h3&#x27;, &#x27;children&#x27;: [{&#x27;text&#x27;: &#x27;Copernicus components&#x27;}]}], &#x27;plaintext&#x27;: &#x27;Copernicus components&#x27;}, &#x27;undefined&#x27;: {&#x27;@type&#x27;: &#x27;slate&#x27;, &#x27;value&#x27;: [{&#x27;type&#x27;: &#x27;p&#x27;, &#x27;children&#x27;: [{&#x27;text&#x27;: &#x27;&#x27;}]}], &#x27;plaintext&#x27;: &#x27;&#x27;}, &#x27;45838f04-260e-4e85-9f73-bdce7d1b4e6e&#x27;: {&#x27;@type&#x27;: &#x27;metadata&#x27;, &#x27;data&#x27;: {&#x27;id&#x27;: &#x27;copernicus_services&#x27;, &#x27;widget&#x27;: &#x27;array&#x27;}}, &#x27;d476bc70-9ae8-4cf0-ac0c-8864f4504b1b&#x27;: {&#x27;@type&#x27;: &#x27;slate&#x27;}}&lt;/default&gt;
+          &lt;default&gt;{&#x27;45838f04-260e-4e85-9f73-bdce7d1b4e6e&#x27;: {&#x27;@type&#x27;: &#x27;metadata&#x27;, &#x27;data&#x27;: {&#x27;id&#x27;: &#x27;copernicus_services&#x27;, &#x27;widget&#x27;: &#x27;array&#x27;}, &#x27;required&#x27;: True, &#x27;fixed&#x27;: True}, &#x27;8f42a81a-b124-45a6-90c0-bf6e75088f6e&#x27;: {&#x27;@type&#x27;: &#x27;metadata&#x27;, &#x27;data&#x27;: {&#x27;id&#x27;: &#x27;subjects&#x27;, &#x27;widget&#x27;: &#x27;tags&#x27;}, &#x27;required&#x27;: True, &#x27;fixed&#x27;: True}, &#x27;9428519c-5aac-4d0b-965a-b68eec687d2a&#x27;: {&#x27;@type&#x27;: &#x27;metadata&#x27;, &#x27;data&#x27;: {&#x27;id&#x27;: &#x27;file&#x27;, &#x27;widget&#x27;: &#x27;file&#x27;}, &#x27;required&#x27;: True, &#x27;fixed&#x27;: True}, &#x27;aedcbd67-ce54-4ed9-ab7f-5d53f50de758&#x27;: {&#x27;@type&#x27;: &#x27;slate&#x27;, &#x27;plaintext&#x27;: &#x27;Tags&#x27;, &#x27;value&#x27;: [{&#x27;children&#x27;: [{&#x27;text&#x27;: &#x27;Tags&#x27;}], &#x27;type&#x27;: &#x27;h3&#x27;}], &#x27;required&#x27;: True, &#x27;fixed&#x27;: True}, &#x27;aff71626-8371-4eb3-bce0-4b836f58d69b&#x27;: {&#x27;@type&#x27;: &#x27;title&#x27;, &#x27;hideContentType&#x27;: True, &#x27;hideModificationDate&#x27;: True, &#x27;hidePublishingDate&#x27;: True}, &#x27;bc26642b-7a1b-4958-b2be-eb8b906cee8b&#x27;: {&#x27;@type&#x27;: &#x27;description&#x27;, &#x27;value&#x27;: [{&#x27;children&#x27;: [{&#x27;text&#x27;: &#x27;Report description here&#x27;}], &#x27;type&#x27;: &#x27;p&#x27;}]}, &#x27;c42e726d-e183-4803-b943-1f312d04efd6&#x27;: {&#x27;@type&#x27;: &#x27;slate&#x27;, &#x27;plaintext&#x27;: &#x27;Copernicus components&#x27;, &#x27;value&#x27;: [{&#x27;children&#x27;: [{&#x27;text&#x27;: &#x27;Copernicus components&#x27;}], &#x27;type&#x27;: &#x27;h3&#x27;}], &#x27;required&#x27;: True, &#x27;fixed&#x27;: True}, &#x27;d476bc70-9ae8-4cf0-ac0c-8864f4504b1b&#x27;: {&#x27;@type&#x27;: &#x27;slate&#x27;}, &#x27;undefined&#x27;: {&#x27;@type&#x27;: &#x27;metadata&#x27;, &#x27;data&#x27;: {&#x27;id&#x27;: &#x27;copernicus_services&#x27;, &#x27;widget&#x27;: &#x27;array&#x27;}, &#x27;required&#x27;: True, &#x27;fixed&#x27;: True}}&lt;/default&gt;
           &lt;description/&gt;
           &lt;required&gt;False&lt;/required&gt;
           &lt;title&gt;Blocks&lt;/title&gt;

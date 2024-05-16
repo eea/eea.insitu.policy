@@ -1,6 +1,11 @@
 Changelog
 =========
 
+2.9 - (2024-05-16)
+---------------------------
+* Change: Add Use case content type. Update types.
+  [GhitaB]
+
 2.8 - (2024-05-14)
 ---------------------------
 * Change: Develop
