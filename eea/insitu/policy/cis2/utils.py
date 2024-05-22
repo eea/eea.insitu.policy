@@ -7,6 +7,7 @@ from eea.insitu.policy.config import (
 )
 from eea.insitu.policy.browser.utils import get_env_var
 from eea.insitu.policy.cis2.cis2_annot import get_annot
+from eea.insitu.policy.vocabulary import generate_data_providers_list
 
 
 def get_cis2_view_token():
@@ -25,7 +26,7 @@ def get_cis2_url():
 
 
 def data_providers_details(data_providers_ids):
-    """Input: list of data providers ids
+    """Input: list of data providers ids (ids must be string!)
     Output: list of data providers (including details from annotations)"""
     data_providers = get_annot()
     res = []
@@ -37,3 +38,68 @@ def data_providers_details(data_providers_ids):
             if str(data_provider["id"]) in data_providers_ids:
                 res.append(data_provider)
     return res
+
+
+def simplified_data_providers_list(data_providers_ids):
+    providers_ids = [str(x) for x in data_providers_ids]
+    members = data_providers_details(providers_ids)
+
+    return [{"name": x["name"], "id": x["id"], "link": x["link"]} for x in members]
+
+
+def data_providers_table():
+    """Prepare data for data providers table"""
+    data_providers = get_annot()
+    simple_providers = []
+    network_providers = []
+    cols = [
+        "id",
+        "acronym",
+        "name",
+        "provider_type",
+        "countries",
+        "link",
+        "members",
+        "requirement_groups",
+        "is_network",
+    ]
+
+    for provider in data_providers:
+        if provider["is_network"]:
+            members = generate_data_providers_list(provider["members"])
+            network_providers.append(
+                {
+                    "id": provider["id"],
+                    "acronym": provider["acronym"],
+                    "name": provider["name"],
+                    "provider_type": provider["provider_type"],
+                    "countries": [x["name"] for x in provider["countries"]],
+                    "link": provider["link"],
+                    "members": simplified_data_providers_list(provider["members"]),
+                    "requirement_groups": [
+                        x["name"] for x in provider["requirement_groups"]
+                    ],
+                    "is_network": provider["is_network"],
+                }
+            )
+        else:
+            simple_providers.append(
+                {
+                    "id": provider["id"],
+                    "acronym": provider["acronym"],
+                    "name": provider["name"],
+                    "provider_type": provider["provider_type"],
+                    "countries": [x["name"] for x in provider["countries"]],
+                    "link": provider["link"],
+                    "members": simplified_data_providers_list(provider["members"]),
+                    "requirement_groups": [
+                        x["name"] for x in provider["requirement_groups"]
+                    ],
+                    "is_network": provider["is_network"],
+                }
+            )
+
+    return {
+        "simple": simple_providers,
+        "network": network_providers,
+    }

@@ -4,6 +4,7 @@
   xmlns:zcml="http://namespaces.zope.org/zcml"
   xmlns:plone="http://namespaces.plone.org/plone">
 
+  <interface interface="eea.insitu.policy.interfaces.ICIS2DataProvidersTable" />
   <adapter
     factory=".data_providers.DataProvidersDetails"
     name="data_providers_details"
@@ -18,32 +19,17 @@
     layer="eea.insitu.policy.interfaces.IEeaInsituPolicyLayer"
     />
 
-  <!-- Adapter for ConnectorData -->
-  <!-- Similar with eea.api.dataconnector but created to generate the data
-  from annotations for our particular case: data_providers_source.txt -->
-  <!-- Original: for="eea.api.dataconnector.interfaces.IBasicDataProvider
-        zope.interface.Interface" -->
   <adapter
-    factory=".dataconnector.ConnectorData"
-    provides="plone.restapi.interfaces.IExpandableElement"
-    name="connector-data"
-    for="plone.dexterity.interfaces.IDexterityItem
-         zope.interface.Interface"
-  />
+    factory=".data_providers.DataProvidersTable"
+    name="data_providers_table"
+    />
 
-  <!-- Original: for="*" Customized for: data_providers_source.txt -->
   <plone:service
     method="GET"
-    for="plone.dexterity.interfaces.IDexterityItem"
-    factory=".dataconnector.ConnectorDataGet"
-    name="@connector-data"
+    factory=".data_providers.DataProvidersTableGet"
+    for="zope.interface.Interface"
     permission="zope2.View"
-  />
-  <plone:service
-    method="POST"
-    for="*"
-    factory=".dataconnector.ConnectorDataPost"
-    name="@connector-data"
-    permission="zope2.View"
-  />
+    name="@data_providers_table"
+    layer="eea.insitu.policy.interfaces.IEeaInsituPolicyLayer"
+    />
 </configure>

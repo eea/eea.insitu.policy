@@ -49,6 +49,13 @@
     />
 
   <browser:page
+    name="cis2_view_table"
+    for="*"
+    class=".cis2_view_data.CIS2ViewTable"
+    permission="cmf.ManagePortal"
+    />
+
+  <browser:page
     name="cis2_import_data"
     for="*"
     class=".cis2_import_data.CIS2ImportData"
