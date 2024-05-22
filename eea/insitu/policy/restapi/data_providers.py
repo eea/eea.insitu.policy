@@ -2,9 +2,12 @@
 
 from plone.restapi.interfaces import IExpandableElement
 from plone.restapi.services import Service
-from eea.insitu.policy.cis2.utils import data_providers_details, data_providers_table
+from eea.insitu.policy.cis2.utils import data_providers_details
+from eea.insitu.policy.cis2.utils import data_providers_table
 from eea.insitu.policy.interfaces import IEeaInsituPolicyLayer
-from eea.insitu.policy.behaviors.cis2_data_providers import ICIS2DataProvidersList
+from eea.insitu.policy.behaviors.cis2_data_providers import (
+    ICIS2DataProvidersList
+)
 from eea.insitu.policy.interfaces import ICIS2DataProvidersTable
 from zope.component import adapter
 from zope.interface import implementer

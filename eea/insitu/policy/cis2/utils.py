@@ -7,7 +7,6 @@ from eea.insitu.policy.config import (
 )
 from eea.insitu.policy.browser.utils import get_env_var
 from eea.insitu.policy.cis2.cis2_annot import get_annot
-from eea.insitu.policy.vocabulary import generate_data_providers_list
 
 
 def get_cis2_view_token():
@@ -41,10 +40,15 @@ def data_providers_details(data_providers_ids):
 
 
 def simplified_data_providers_list(data_providers_ids):
+    """ Input: list of data providers ids
+        Output: [{id, name, link} for each one]
+    """
     providers_ids = [str(x) for x in data_providers_ids]
     members = data_providers_details(providers_ids)
 
-    return [{"name": x["name"], "id": x["id"], "link": x["link"]} for x in members]
+    return [
+        {"name": x["name"], "id": x["id"], "link": x["link"]} for x in members
+    ]
 
 
 def data_providers_table():
@@ -52,21 +56,9 @@ def data_providers_table():
     data_providers = get_annot()
     simple_providers = []
     network_providers = []
-    cols = [
-        "id",
-        "acronym",
-        "name",
-        "provider_type",
-        "countries",
-        "link",
-        "members",
-        "requirement_groups",
-        "is_network",
-    ]
 
     for provider in data_providers:
         if provider["is_network"]:
-            members = generate_data_providers_list(provider["members"])
             network_providers.append(
                 {
                     "id": provider["id"],
@@ -75,7 +67,8 @@ def data_providers_table():
                     "provider_type": provider["provider_type"],
                     "countries": [x["name"] for x in provider["countries"]],
                     "link": provider["link"],
-                    "members": simplified_data_providers_list(provider["members"]),
+                    "members": simplified_data_providers_list(
+                        provider["members"]),
                     "requirement_groups": [
                         x["name"] for x in provider["requirement_groups"]
                     ],
@@ -91,7 +84,8 @@ def data_providers_table():
                     "provider_type": provider["provider_type"],
                     "countries": [x["name"] for x in provider["countries"]],
                     "link": provider["link"],
-                    "members": simplified_data_providers_list(provider["members"]),
+                    "members": simplified_data_providers_list(
+                        provider["members"]),
                     "requirement_groups": [
                         x["name"] for x in provider["requirement_groups"]
                     ],
