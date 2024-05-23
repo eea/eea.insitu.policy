@@ -3,9 +3,12 @@
 from plone.restapi.interfaces import IExpandableElement
 from plone.restapi.services import Service
 from eea.insitu.policy.cis2.utils import data_providers_details
+from eea.insitu.policy.cis2.utils import data_providers_table
 from eea.insitu.policy.interfaces import IEeaInsituPolicyLayer
 from eea.insitu.policy.behaviors.cis2_data_providers import (
-    ICIS2DataProvidersList)
+    ICIS2DataProvidersList
+)
+from eea.insitu.policy.interfaces import ICIS2DataProvidersTable
 from zope.component import adapter
 from zope.interface import implementer
 
@@ -35,3 +38,24 @@ class DataProvidersDetailsGet(Service):
         """Data providers"""
         data_providers = DataProvidersDetails(self.context, self.request)
         return data_providers
+
+
+@implementer(IExpandableElement)
+@adapter(ICIS2DataProvidersTable, IEeaInsituPolicyLayer)
+class DataProvidersTable(object):
+    """Data providers table"""
+
+    def __init__(self, context, request):
+        self.context = context
+        self.request = request
+
+    def __call__(self, expand=False):
+        return {"data_providers_table": data_providers_table()}
+
+
+class DataProvidersTableGet(Service):
+    """Data providers table"""
+
+    def reply(self):
+        """Data providers table"""
+        return DataProvidersTable(self.context, self.request)

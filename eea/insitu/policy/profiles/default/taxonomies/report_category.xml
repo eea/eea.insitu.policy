@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='utf-8'?>
+<vdex xmlns="http://www.imsglobal.org/xsd/imsvdex_v1p0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsvdex_v1p0 imsvdex_v1p0.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd" orderSignificant="false" profileType="hierarchicalTokenTerms" language="en">
+  <vocabName>
+    <langstring language="en">Report category</langstring>
+  </vocabName>
+  <vocabIdentifier>report_category</vocabIdentifier>
+
+<term>
+    <termIdentifier>GENERAL</termIdentifier>
+    <caption>
+        <langstring language="en">General Reports on In Situ Data</langstring>
+    </caption>
+</term>
+<term>
+    <termIdentifier>GENERALATMO</termIdentifier>
+    <caption>
+        <langstring language="en">General Reports - Atmosphere</langstring>
+    </caption>
+</term>
+<term>
+    <termIdentifier>GENERALLAND</termIdentifier>
+    <caption>
+        <langstring language="en">General Reports - Land</langstring>
+    </caption>
+</term>
+<term>
+    <termIdentifier>GENERALWATER</termIdentifier>
+    <caption>
+        <langstring language="en">General Reports - Water</langstring>
+    </caption>
+</term>
+<term>
+    <termIdentifier>GENERALARCT</termIdentifier>
+    <caption>
+        <langstring language="en">General Reports - Arctic</langstring>
+    </caption>
+</term>
+<term>
+    <termIdentifier>GENERALMARINE</termIdentifier>
+    <caption>
+        <langstring language="en">General Reports - Marine</langstring>
+    </caption>
+</term>
+<term>
+    <termIdentifier>GENERALCROSS</termIdentifier>
+    <caption>
+        <langstring language="en">General Reports - Cross cutting</langstring>
+    </caption>
+</term>
+<term>
+    <termIdentifier>GENERALSPACE</termIdentifier>
+    <caption>
+        <langstring language="en">General Reports - Space</langstring>
+    </caption>
+</term>
+<term>
+    <termIdentifier>NOV23</termIdentifier>
+    <caption>
+        <langstring language="en">Copernicus Working Group on Geospatial Data meeting (November 2023)</langstring>
+    </caption>
+</term>
+<term>
+    <termIdentifier>OCT23</termIdentifier>
+    <caption>
+        <langstring language="en">Copernicus Working Group on In Situ Observations meeting (October 2023)</langstring>
+    </caption>
+</term>
+<term>
+    <termIdentifier>APR18</termIdentifier>
+    <caption>
+        <langstring language="en">Evolution of the Copernicus In Situ component workshop (25 April 2018)</langstring>
+    </caption>
+</term>
+<term>
+    <termIdentifier>WORKSHOPPRES</termIdentifier>
+    <caption>
+        <langstring language="en">Workshop Presentations</langstring>
+    </caption>
+</term>
+<term>
+    <termIdentifier>STATEOFPLAY</termIdentifier>
+    <caption>
+        <langstring language="en">State of Play</langstring>
+    </caption>
+</term>
+<term>
+    <termIdentifier>WORKSHOPREP</termIdentifier>
+    <caption>
+        <langstring language="en">Workshop Reports</langstring>
+    </caption>
+</term>
+<term>
+    <termIdentifier>BACKGROUND</termIdentifier>
+    <caption>
+        <langstring language="en">Background</langstring>
+    </caption>
+</term>
+</vdex>

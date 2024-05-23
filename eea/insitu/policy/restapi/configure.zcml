@@ -4,6 +4,7 @@
   xmlns:zcml="http://namespaces.zope.org/zcml"
   xmlns:plone="http://namespaces.plone.org/plone">
 
+  <interface interface="eea.insitu.policy.interfaces.ICIS2DataProvidersTable" />
   <adapter
     factory=".data_providers.DataProvidersDetails"
     name="data_providers_details"
@@ -15,6 +16,20 @@
     for="zope.interface.Interface"
     permission="zope2.View"
     name="@data_providers_details"
+    layer="eea.insitu.policy.interfaces.IEeaInsituPolicyLayer"
+    />
+
+  <adapter
+    factory=".data_providers.DataProvidersTable"
+    name="data_providers_table"
+    />
+
+  <plone:service
+    method="GET"
+    factory=".data_providers.DataProvidersTableGet"
+    for="zope.interface.Interface"
+    permission="zope2.View"
+    name="@data_providers_table"
     layer="eea.insitu.policy.interfaces.IEeaInsituPolicyLayer"
     />
 </configure>
