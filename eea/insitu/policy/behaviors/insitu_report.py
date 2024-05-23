@@ -3,7 +3,6 @@
 from plone.autoform.interfaces import IFormFieldProvider
 from plone.namedfile.field import NamedBlobFile
 from plone.supermodel import model
-from zope import schema
 from zope.interface import provider
 
 
