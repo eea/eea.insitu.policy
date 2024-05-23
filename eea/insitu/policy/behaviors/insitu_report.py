@@ -16,11 +16,3 @@ class IInsituReportBehavior(model.Schema):
         description="File containing the report, example: pdf",
         required=False,
     )
-
-    report_category = schema.List(
-        title="Report category",
-        description="Select the category of report",
-        required=True,
-        value_type=schema.Choice(
-            vocabulary="eea.insitu.policy.report_categories"),
-    )
