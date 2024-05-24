@@ -14,6 +14,12 @@ from eea.insitu.policy.browser.utils import normalized
 from plone import api
 from DateTime import DateTime
 
+
+def empty_blocks():
+    """Init blocks"""
+    return {"blocks": {}, "blocks_layout": {"items": []}}
+
+
 logger = logging.getLogger("eea.insitu.policy")
 
 
@@ -145,3 +151,28 @@ class SyncInsituReportsCreationDate(BrowserView):
         for brain in brains:
             report = brain.getObject()
             self._fix_date_for_report(report)
+
+
+class FixNewsBlocksAndBlocksLayout(BrowserView):
+    """Fix values for blocks and blocks layout of News Items"""
+
+    def _fix_fields(self, news_item):
+        """Fix news item"""
+        default_blocks = empty_blocks()
+
+        item = news_item.aq_inner.aq_self
+        item.blocks = default_blocks["blocks"]
+        item.blocks_layout = default_blocks["blocks_layout"]
+        news_item.blocks = default_blocks["blocks"]
+        news_item.blocks_layout = default_blocks["blocks_layout"]
+        news_item.reindexObject()
+        transaction.commit()
+
+    def __call__(self):
+        site = api.portal.get()
+        catalog = getToolByName(site, "portal_catalog")
+        brains = catalog.searchResults(portal_type="News Item")
+
+        for brain in brains:
+            news_item = brain.getObject()
+            self._fix_fields(news_item)
