@@ -63,6 +63,13 @@
     />
 
   <browser:page
+    name="fix_news_items"
+    for="*"
+    class=".views.FixNewsBlocksAndBlocksLayout"
+    permission="cmf.ManagePortal"
+    />
+
+  <browser:page
     name="gopdb"
     for="*"
     class=".admin.GoPDB"
