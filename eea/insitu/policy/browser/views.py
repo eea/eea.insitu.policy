@@ -15,9 +15,23 @@ from plone import api
 from DateTime import DateTime
 
 
-def empty_blocks():
+def generate_default_blocks():
     """Init blocks"""
-    return {"blocks": {}, "blocks_layout": {"items": []}}
+    blocks = {
+        "488c7be8-d15b-4885-abca-b133a2295be9": {
+            "@type": "slate",
+            "plaintext": "",
+            "value": [{"children": [{"text": ""}], "type": "p"}],
+        },
+        "e930e15b-4e1e-40d5-bb5e-3b6e3e32b95a": {"@type": "title"},
+        "undefined": {"@type": "title"},
+    }
+
+    items = [
+        "e930e15b-4e1e-40d5-bb5e-3b6e3e32b95a",
+        "488c7be8-d15b-4885-abca-b133a2295be9",
+    ]
+    return {"blocks": blocks, "blocks_layout": {"items": items}}
 
 
 logger = logging.getLogger("eea.insitu.policy")
@@ -158,7 +172,7 @@ class FixNewsBlocksAndBlocksLayout(BrowserView):
 
     def _fix_fields(self, news_item):
         """Fix news item"""
-        default_blocks = empty_blocks()
+        default_blocks = generate_default_blocks()
 
         item = news_item.aq_inner.aq_self
         item.blocks = default_blocks["blocks"]
