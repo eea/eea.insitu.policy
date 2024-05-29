@@ -1,8 +1,10 @@
 Changelog
 =========
 
-3.3-dev0 - (unreleased)
+3.3 - (2024-05-29)
 ---------------------------
+* Change: Refs #269929 - Update data providers table structure (add title, link for name column).
+  [GhitaB]
 
 3.2 - (2024-05-28)
 ---------------------------
