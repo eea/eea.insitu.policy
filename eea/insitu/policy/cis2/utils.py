@@ -62,10 +62,12 @@ def data_providers_table():
                 {
                     "id": provider["id"],
                     "acronym": provider["acronym"],
-                    "name": provider["name"],
+                    "name": {
+                        "title": provider["name"],
+                        "link": provider["link"]},
                     "provider_type": provider["provider_type"],
                     "countries": [x["name"] for x in provider["countries"]],
-                    "link": provider["link"],
+                    "link": provider["website"],
                     "members": simplified_data_providers_list(
                         provider["members"]),
                     "requirement_groups": [
@@ -79,10 +81,13 @@ def data_providers_table():
                 {
                     "id": provider["id"],
                     "acronym": provider["acronym"],
-                    "name": provider["name"],
+                    "name": {
+                        "title": provider["name"],
+                        "link": provider["link"]
+                    },
                     "provider_type": provider["provider_type"],
                     "countries": [x["name"] for x in provider["countries"]],
-                    "link": provider["link"],
+                    "link": provider["website"],
                     "members": simplified_data_providers_list(
                         provider["members"]),
                     "requirement_groups": [
