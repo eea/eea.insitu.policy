@@ -1,6 +1,11 @@
 Changelog
 =========
 
+3.4 - (2024-05-31)
+---------------------------
+* Change: Refs #269929 - Use website instead of link for members column.
+  [GhitaB]
+
 3.3 - (2024-05-29)
 ---------------------------
 * Change: Refs #269929 - Update data providers table structure (add title, link for name column).

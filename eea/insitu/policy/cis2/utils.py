@@ -47,7 +47,8 @@ def simplified_data_providers_list(data_providers_ids):
     members = data_providers_details(providers_ids)
 
     return [
-        {"name": x["name"], "id": x["id"], "link": x["link"]} for x in members]
+        {"name": x["name"], "id": x["id"],
+         "link": x["website"]} for x in members]
 
 
 def data_providers_table():
@@ -63,8 +64,7 @@ def data_providers_table():
                     "id": provider["id"],
                     "acronym": provider["acronym"],
                     "name": {
-                        "title": provider["name"],
-                        "link": provider["link"]},
+                        "title": provider["name"], "link": provider["link"]},
                     "provider_type": provider["provider_type"],
                     "countries": [x["name"] for x in provider["countries"]],
                     "link": provider["website"],
