@@ -1,6 +1,11 @@
 Changelog
 =========
 
+3.5 - (2024-06-26)
+---------------------------
+* Change: Refs #271570 - Use plone.memoize for data_providers_table.
+  [GhitaB]
+
 3.4 - (2024-05-31)
 ---------------------------
 * Change: Refs #269929 - Use website instead of link for members column.
