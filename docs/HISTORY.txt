@@ -1,6 +1,9 @@
 Changelog
 =========
 
+3.6-dev0 - (unreleased)
+---------------------------
+
 3.5 - (2024-06-26)
 ---------------------------
 * Change: Refs #271570 - Use plone.memoize for data_providers_table.
