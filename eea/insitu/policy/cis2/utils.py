@@ -95,7 +95,7 @@ def data_providers_table():
                         x["name"] for x in provider["requirement_groups"]
                     ],
                     "is_network": provider["is_network"],
-                    "native_name": provider["native_name"],                    
+                    "native_name": provider["native_name"],
                 }
             )
 
