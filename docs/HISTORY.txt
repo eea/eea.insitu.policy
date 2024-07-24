@@ -1,8 +1,10 @@
 Changelog
 =========
 
-3.6-dev0 - (unreleased)
+3.6 - (2024-07-24)
 ---------------------------
+* Change: Update data providers table structure
+  [GhitaB]
 
 3.5 - (2024-06-26)
 ---------------------------
