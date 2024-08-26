@@ -1,8 +1,10 @@
 Changelog
 =========
 
-3.7-dev0 - (unreleased)
+3.7 - (2024-08-26)
 ---------------------------
+* Change: Refs #273185 - Optimize data providers table
+  [GhitaB]
 
 3.6 - (2024-07-24)
 ---------------------------
