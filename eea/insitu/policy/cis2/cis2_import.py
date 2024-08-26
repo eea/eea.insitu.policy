@@ -19,7 +19,7 @@ def cis2_importer():
             json_data = response.json()
 
             if json_data:
-                save_annot(json_data)
+                save_annot(json_data, refresh_data_providers_cache=True)
                 logger.info("CIS2 import - Success.")
             else:
                 logger.error("CIS2 import - Fail.")

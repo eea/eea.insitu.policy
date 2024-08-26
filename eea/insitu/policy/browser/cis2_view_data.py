@@ -2,7 +2,8 @@
 
 from Products.Five import BrowserView
 from eea.insitu.policy.cis2.cis2_annot import get_annot
-from eea.insitu.policy.cis2.utils import data_providers_table
+from eea.insitu.policy.cis2.cis2_annot import get_data_providers_table_annot
+from eea.insitu.policy.cis2.cis2_annot import save_data_providers_table_annot
 
 
 class CIS2ViewData(BrowserView):
@@ -16,4 +17,5 @@ class CIS2ViewTable(BrowserView):
     """For testing, use this view to verify the data providers table data"""
 
     def __call__(self):
-        return data_providers_table()
+        save_data_providers_table_annot()  # refresh cached table
+        return get_data_providers_table_annot()
