@@ -3,8 +3,8 @@
 from plone.restapi.interfaces import IExpandableElement
 from plone.restapi.services import Service
 from plone.memoize.view import memoize
-from eea.insitu.policy.cis2.utils import data_providers_details
-from eea.insitu.policy.cis2.utils import data_providers_table
+from eea.insitu.policy.cis2.cis2_annot import get_data_providers_table_annot
+from eea.insitu.policy.cis2.cis2_annot import data_providers_details
 from eea.insitu.policy.interfaces import IEeaInsituPolicyLayer
 from eea.insitu.policy.behaviors.cis2_data_providers import (
     ICIS2DataProvidersList)
@@ -52,7 +52,7 @@ class DataProvidersTable(object):
     @memoize
     def data_providers_table(self):
         """cached table data"""
-        return data_providers_table()
+        return get_data_providers_table_annot()
 
     def __call__(self, expand=False):
         return {"data_providers_table": self.data_providers_table()}
