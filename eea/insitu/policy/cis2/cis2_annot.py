@@ -1,8 +1,8 @@
 """Annotations for CIS2"""
 
+import logging
 from zope.annotation.interfaces import IAnnotations
 from plone import api
-import logging
 from eea.insitu.policy.config import (
     CIS2_ANNOT_KEY, DATA_PROVIDERS_TABLE_ANNOT_KEY)
 
