@@ -1,8 +1,10 @@
 Changelog
 =========
 
-3.8-dev0 - (unreleased)
+3.8 - (2024-12-03)
 ---------------------------
+* Change: Refs #281405 - Data providers: remove requirement_group, add services and components.
+  [GhitaB]
 
 3.7 - (2024-08-26)
 ---------------------------
