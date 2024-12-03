@@ -3,7 +3,8 @@
 import logging
 from zope.annotation.interfaces import IAnnotations
 from plone import api
-from eea.insitu.policy.config import CIS2_ANNOT_KEY, DATA_PROVIDERS_TABLE_ANNOT_KEY
+from eea.insitu.policy.config import CIS2_ANNOT_KEY
+from eea.insitu.policy.config import DATA_PROVIDERS_TABLE_ANNOT_KEY
 
 logger = logging.getLogger("eea.insitu.policy")
 
@@ -173,4 +174,3 @@ def simplified_data_providers_list(data_providers_ids):
         "id": x["id"],
         "link": x["website"]
     } for x in members]
-
