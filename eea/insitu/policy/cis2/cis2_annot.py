@@ -3,8 +3,7 @@
 import logging
 from zope.annotation.interfaces import IAnnotations
 from plone import api
-from eea.insitu.policy.config import (
-    CIS2_ANNOT_KEY, DATA_PROVIDERS_TABLE_ANNOT_KEY)
+from eea.insitu.policy.config import CIS2_ANNOT_KEY, DATA_PROVIDERS_TABLE_ANNOT_KEY
 
 logger = logging.getLogger("eea.insitu.policy")
 
@@ -93,43 +92,53 @@ def prepare_data_providers_table():
 
     for provider in data_providers:
         if provider["is_network"]:
-            network_providers.append(
-                {
-                    "id": provider["id"],
-                    "acronym": provider["acronym"],
-                    "name": {
-                        "title": provider["name"], "link": provider["link"]},
-                    "provider_type": provider["provider_type"],
-                    "countries": [x["name"] for x in provider["countries"]],
-                    "link": provider["website"],
-                    "members": simplified_data_providers_list(
-                        provider["members"]),
-                    "requirement_groups": [
-                        x["name"] for x in provider["requirement_groups"]
-                    ],
-                    "is_network": provider["is_network"],
-                    "native_name": provider.get("native_name", ""),
-                }
-            )
+            network_providers.append({
+                "id":
+                provider["id"],
+                "acronym":
+                provider["acronym"],
+                "name": {
+                    "title": provider["name"],
+                    "link": provider["link"]
+                },
+                "provider_type":
+                provider["provider_type"],
+                "countries": [x["name"] for x in provider["countries"]],
+                "link":
+                provider["website"],
+                "members":
+                simplified_data_providers_list(provider["members"]),
+                "services": [x["name"] for x in provider["services"]],
+                "components": [x["name"] for x in provider["components"]],
+                "is_network":
+                provider["is_network"],
+                "native_name":
+                provider.get("native_name", ""),
+            })
         else:
-            simple_providers.append(
-                {
-                    "id": provider["id"],
-                    "acronym": provider["acronym"],
-                    "name": {
-                        "title": provider["name"], "link": provider["link"]},
-                    "provider_type": provider["provider_type"],
-                    "countries": [x["name"] for x in provider["countries"]],
-                    "link": provider["website"],
-                    "members": simplified_data_providers_list(
-                        provider["members"]),
-                    "requirement_groups": [
-                        x["name"] for x in provider["requirement_groups"]
-                    ],
-                    "is_network": provider["is_network"],
-                    "native_name": provider.get("native_name", ""),
-                }
-            )
+            simple_providers.append({
+                "id":
+                provider["id"],
+                "acronym":
+                provider["acronym"],
+                "name": {
+                    "title": provider["name"],
+                    "link": provider["link"]
+                },
+                "provider_type":
+                provider["provider_type"],
+                "countries": [x["name"] for x in provider["countries"]],
+                "link":
+                provider["website"],
+                "members":
+                simplified_data_providers_list(provider["members"]),
+                "services": [x["name"] for x in provider["services"]],
+                "components": [x["name"] for x in provider["components"]],
+                "is_network":
+                provider["is_network"],
+                "native_name":
+                provider.get("native_name", ""),
+            })
 
     return {
         "simple": simple_providers,
@@ -159,6 +168,9 @@ def simplified_data_providers_list(data_providers_ids):
     providers_ids = [str(x) for x in data_providers_ids]
     members = data_providers_details(providers_ids)
 
-    return [
-        {"name": x["name"], "id": x["id"],
-            "link": x["website"]} for x in members]
+    return [{
+        "name": x["name"],
+        "id": x["id"],
+        "link": x["website"]
+    } for x in members]
+
