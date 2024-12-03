@@ -20,7 +20,7 @@ class CIS2SaveJSON(BrowserView):
                 json_file.seek(0)
                 json_data = json.loads(json_file.read())
 
-                save_annot(json_data)
+                save_annot(json_data, refresh_data_providers_cache=True)
 
                 return "Saved."
 
