@@ -1,6 +1,11 @@
 Changelog
 =========
 
+3.9 - (2024-12-05)
+---------------------------
+* Change: Refs #281405 - Data providers table changes
+  [GhitaB]
+
 3.8 - (2024-12-03)
 ---------------------------
 * Change: Refs #281405 - Data providers: remove requirement_group, add services and components.
