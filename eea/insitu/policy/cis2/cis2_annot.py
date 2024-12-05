@@ -86,8 +86,7 @@ def save_data_providers_table_annot():
 
 
 def extract_services_and_components(components):
-    """Prepare services table column"""
-    """
+    """Prepare services table column
         Inoput:
         "components": [
           {
