@@ -1,6 +1,11 @@
 Changelog
 =========
 
+3.10-dev0 - (unreleased)
+---------------------------
+* Change: Replace Python linting to ruff
+  [mihaidobrescu1111 = refs #286821]
+
 3.9 - (2024-12-05)
 ---------------------------
 * Change: Refs #281405 - Data providers table changes
