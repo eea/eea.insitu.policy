@@ -6,8 +6,7 @@ from eea.insitu.policy.tests.base import FUNCTIONAL_TESTING
 from plone.testing import layered
 
 OPTIONFLAGS = (
-    doctest.REPORT_ONLY_FIRST_FAILURE | doctest.ELLIPSIS |
-      doctest.NORMALIZE_WHITESPACE
+    doctest.REPORT_ONLY_FIRST_FAILURE | doctest.ELLIPSIS | doctest.NORMALIZE_WHITESPACE
 )
 
 
@@ -18,8 +17,7 @@ def test_suite():
         [
             layered(
                 doctest.DocFileSuite(
-                    "README.txt", optionflags=OPTIONFLAGS,
-                        package="eea.insitu.policy"
+                    "README.txt", optionflags=OPTIONFLAGS, package="eea.insitu.policy"
                 ),
                 layer=FUNCTIONAL_TESTING,
             ),

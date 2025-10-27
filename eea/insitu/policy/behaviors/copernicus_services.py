@@ -15,7 +15,6 @@ class ICopernicusServices(model.Schema):
         title="Copernicus Services",
         description="Select Copernicus Services",
         required=False,
-        value_type=schema.Choice(
-            vocabulary="eea.insitu.policy.copernicus_services"),
+        value_type=schema.Choice(vocabulary="eea.insitu.policy.copernicus_services"),
     )
     directives.write_permission(copernicus_services="cmf.ManagePortal")

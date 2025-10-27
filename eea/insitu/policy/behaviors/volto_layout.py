@@ -23,8 +23,7 @@ insitu_report_layout_blocks = {
         "fields": [
             {
                 "@id": "0073df56-49dd-448b-b969-49d778c6a455",
-                "field": {
-                    "id": "topics", "title": "Topics", "widget": "array"},
+                "field": {"id": "topics", "title": "Topics", "widget": "array"},
                 "showLabel": "true",
             },
             {
@@ -47,9 +46,7 @@ insitu_report_layout_blocks = {
             },
             {
                 "@id": "b9555f2d-1b62-467b-b22c-24fda6c0df5f",
-                "field": {
-                    "id": "publisher",
-                    "title": "Publisher", "widget": "array"},
+                "field": {"id": "publisher", "title": "Publisher", "widget": "array"},
                 "showLabel": "true",
             },
             {
@@ -72,8 +69,7 @@ insitu_report_layout_blocks = {
             },
             {
                 "@id": "8fc36080-4025-4ddb-af3d-60bde94214e2",
-                "field": {
-                    "id": "rights", "title": "Rights", "widget": "textarea"},
+                "field": {"id": "rights", "title": "Rights", "widget": "textarea"},
                 "showLabel": "true",
             },
             {
