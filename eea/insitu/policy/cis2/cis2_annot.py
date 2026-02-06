@@ -87,26 +87,26 @@ def save_data_providers_table_annot():
 
 def extract_services_and_components(components):
     """Prepare services table column
-        Inoput:
-        "components": [
-          {
-            "id": 2,
-            "name": "Component 1",
-            "service_id": 3,
-            "service_name": "Service A"
-          },
-          {
-            "id": 5,
-            ...
-          },
-          ...
-        ],
+    Inoput:
+    "components": [
+      {
+        "id": 2,
+        "name": "Component 1",
+        "service_id": 3,
+        "service_name": "Service A"
+      },
+      {
+        "id": 5,
+        ...
+      },
+      ...
+    ],
 
-        Output:
-        {
-            'Service A': ['Component 1', 'Component 2'],
-            'Service B': ['Component 4', 'Component 3'],
-        }
+    Output:
+    {
+        'Service A': ['Component 1', 'Component 2'],
+        'Service B': ['Component 4', 'Component 3'],
+    }
     """
     services = {}
     for component in components:
@@ -126,53 +126,35 @@ def prepare_data_providers_table():
 
     for provider in data_providers:
         if provider["is_network"]:
-            network_providers.append({
-                "id":
-                provider["id"],
-                "acronym":
-                provider["acronym"],
-                "name": {
-                    "title": provider["name"],
-                    "link": provider["link"]
-                },
-                "provider_type":
-                provider["provider_type"],
-                "countries": [x["name"] for x in provider["countries"]],
-                "link":
-                provider["website"],
-                "members":
-                simplified_data_providers_list(provider["members"]),
-                "services": extract_services_and_components(
-                    provider["components"]),
-                "is_network":
-                provider["is_network"],
-                "native_name":
-                provider.get("native_name", ""),
-            })
+            network_providers.append(
+                {
+                    "id": provider["id"],
+                    "acronym": provider["acronym"],
+                    "name": {"title": provider["name"], "link": provider["link"]},
+                    "provider_type": provider["provider_type"],
+                    "countries": [x["name"] for x in provider["countries"]],
+                    "link": provider["website"],
+                    "members": simplified_data_providers_list(provider["members"]),
+                    "services": extract_services_and_components(provider["components"]),
+                    "is_network": provider["is_network"],
+                    "native_name": provider.get("native_name", ""),
+                }
+            )
         else:
-            simple_providers.append({
-                "id":
-                provider["id"],
-                "acronym":
-                provider["acronym"],
-                "name": {
-                    "title": provider["name"],
-                    "link": provider["link"]
-                },
-                "provider_type":
-                provider["provider_type"],
-                "countries": [x["name"] for x in provider["countries"]],
-                "link":
-                provider["website"],
-                "members":
-                simplified_data_providers_list(provider["members"]),
-                "services": extract_services_and_components(
-                    provider["components"]),
-                "is_network":
-                provider["is_network"],
-                "native_name":
-                provider.get("native_name", ""),
-            })
+            simple_providers.append(
+                {
+                    "id": provider["id"],
+                    "acronym": provider["acronym"],
+                    "name": {"title": provider["name"], "link": provider["link"]},
+                    "provider_type": provider["provider_type"],
+                    "countries": [x["name"] for x in provider["countries"]],
+                    "link": provider["website"],
+                    "members": simplified_data_providers_list(provider["members"]),
+                    "services": extract_services_and_components(provider["components"]),
+                    "is_network": provider["is_network"],
+                    "native_name": provider.get("native_name", ""),
+                }
+            )
 
     return {
         "simple": simple_providers,
@@ -202,8 +184,4 @@ def simplified_data_providers_list(data_providers_ids):
     providers_ids = [str(x) for x in data_providers_ids]
     members = data_providers_details(providers_ids)
 
-    return [{
-        "name": x["name"],
-        "id": x["id"],
-        "link": x["website"]
-    } for x in members]
+    return [{"name": x["name"], "id": x["id"], "link": x["website"]} for x in members]

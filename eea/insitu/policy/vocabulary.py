@@ -52,17 +52,14 @@ _report_categories = (
     ("GENERALMARINE", "General Reports - Marine"),
     ("GENERALCROSS", "General Reports - Cross cutting"),
     ("GENERALSPACE", "General Reports - Space"),
-    ("NOV23", "Copernicus Working Group on Geospatial Data meeting "
-        "(November 2023)"),
+    ("NOV23", "Copernicus Working Group on Geospatial Data meeting (November 2023)"),
     (
         "OCT23",
-        "Copernicus Working Group on In Situ Observations meeting "
-        "(October 2023)",
+        "Copernicus Working Group on In Situ Observations meeting (October 2023)",
     ),
     (
         "APR18",
-        "Evolution of the Copernicus In Situ component workshop "
-        "(25 April 2018)",
+        "Evolution of the Copernicus In Situ component workshop (25 April 2018)",
     ),
     ("WORKSHOPPRES", "Workshop Presentations"),
     ("STATEOFPLAY", "State of Play"),
