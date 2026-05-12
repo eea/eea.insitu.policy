@@ -3,6 +3,15 @@
   xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
   i18n_domain="eea">
 
+  <genericsetup:upgradeStep
+    title="Add Sentinel-2 Copernicus Component"
+    description="Add Sentinel-2 to the Copernicus Components taxonomy."
+    source="1.6"
+    destination="1.7"
+    handler=".upgrades.add_sentinel2_copernicus_component"
+    profile="eea.insitu.policy:default"
+    />
+
   <genericsetup:upgradeSteps
     source="1.5"
     destination="1.6"

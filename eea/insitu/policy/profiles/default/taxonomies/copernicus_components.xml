@@ -47,6 +47,12 @@
       </caption>
   </term>
   <term>
+      <termIdentifier>Sentinel-2</termIdentifier>
+      <caption>
+          <langstring language="en">Sentinel-2</langstring>
+      </caption>
+  </term>
+  <term>
       <termIdentifier>SENOCEAN</termIdentifier>
       <caption>
           <langstring language="en">Se-3-Ocean Sentinel-3-Ocean</langstring>

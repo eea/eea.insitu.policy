@@ -4,6 +4,9 @@ Changelog
 4.0-dev0 - (unreleased)
 ---------------------------
 
+* Change: Refs #303431 - Add Sentinel-2 Copernicus Component.
+  [Teodor]
+
 3.9 - (2024-12-05)
 ---------------------------
 * Change: Refs #281405 - Data providers table changes
